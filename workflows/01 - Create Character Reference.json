@@ -1,0 +1,510 @@
+{
+  "last_node_id": 5,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "size": [
+        400,
+        420
+      ],
+      "order": 0,
+      "mode": 0,
+      "pos": [
+        20,
+        80
+      ],
+      "flags": {},
+      "title": "Upload your portrait reference",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "widgets_values": [
+        "",
+        "image"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "size": [
+        400,
+        420
+      ],
+      "order": 1,
+      "mode": 0,
+      "pos": [
+        20,
+        560
+      ],
+      "flags": {},
+      "title": "Select H3 VIDEO VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "MiniMaxH3RefModExtract",
+      "size": [
+        470,
+        850
+      ],
+      "order": 4,
+      "mode": 0,
+      "pos": [
+        940,
+        80
+      ],
+      "flags": {},
+      "title": "Create and save your character RefMod",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3RefModExtract"
+      },
+      "inputs": [
+        {
+          "localized_name": "ref_image_0",
+          "name": "refs_image.ref_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "refs_video.ref_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "refs_bundle",
+          "name": "refs_bundle",
+          "shape": 7,
+          "type": "H3_REF_LIST",
+          "link": null
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "localized_name": "av_encoder",
+          "name": "av_encoder",
+          "shape": 7,
+          "type": "MINIMAX_H3_AV_ENCODER",
+          "link": null
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 2
+        },
+        {
+          "localized_name": "mask_list",
+          "name": "mask_list",
+          "shape": 7,
+          "type": "H3_MASK_LIST",
+          "link": null
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "type": "STRING",
+          "widget": {
+            "name": "name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mode",
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "concept_type",
+          "name": "concept_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "concept_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "background_retention",
+          "name": "background_retention",
+          "type": "FLOAT",
+          "widget": {
+            "name": "background_retention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_resolution",
+          "name": "ref_resolution",
+          "type": "INT",
+          "widget": {
+            "name": "ref_resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "pool_h",
+          "name": "pool_h",
+          "type": "INT",
+          "widget": {
+            "name": "pool_h"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "pool_w",
+          "name": "pool_w",
+          "type": "INT",
+          "widget": {
+            "name": "pool_w"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_frames",
+          "name": "latent_frames",
+          "type": "INT",
+          "widget": {
+            "name": "latent_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Refinement Steps",
+          "name": "identity",
+          "type": "INT",
+          "widget": {
+            "name": "identity"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "merge",
+          "name": "merge",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "merge"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "motion_only",
+          "name": "motion_only",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "motion_only"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "multiplier",
+          "name": "multiplier",
+          "type": "INT",
+          "widget": {
+            "name": "multiplier"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_tokens",
+          "name": "max_tokens",
+          "type": "INT",
+          "widget": {
+            "name": "max_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "description",
+          "name": "description",
+          "type": "STRING",
+          "widget": {
+            "name": "description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save",
+          "name": "save",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "extraction_preset",
+          "name": "extraction_preset",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "extraction_preset"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "subfolder",
+          "name": "subfolder",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "subfolder"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "budget_policy",
+          "name": "budget_policy",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "budget_policy"
+          },
+          "link": null
+        },
+        {
+          "name": "refs_image.ref_image_1",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "refs_image.ref_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "refs_image.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mods",
+          "name": "mods",
+          "type": "H3_REF_MODS",
+          "links": []
+        },
+        {
+          "localized_name": "details",
+          "name": "details",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "widgets_values": [
+        "character_reference",
+        "Full Reference",
+        "identity",
+        0,
+        512,
+        16,
+        16,
+        16,
+        0,
+        false,
+        false,
+        1,
+        5120,
+        "",
+        true,
+        "manual",
+        "",
+        "error"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "MarkdownNote",
+      "size": [
+        450,
+        300
+      ],
+      "order": 2,
+      "mode": 0,
+      "pos": [
+        1460,
+        80
+      ],
+      "flags": {},
+      "title": "Start here",
+      "properties": {
+        "Node name for S&R": "MarkdownNote"
+      },
+      "inputs": [],
+      "outputs": [],
+      "widgets_values": [
+        "# Create a character RefMod\n\n1. Upload your own portrait and full-body reference of the same character.\n2. Select an installed MiniMax H3 VIDEO VAE.\n3. Choose a unique RefMod name before running; an existing file with that name can be replaced.\n4. Run to save under models/refmods, then refresh the RefMod list in your video workflow.\n\nBoth connected image inputs start blank. For one reference, remove the unused image loader and its connection.\nRequires ComfyUI-MiniMaxH3Mod with standalone creator support (0.2.6 or newer)."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "size": [
+        400,
+        420
+      ],
+      "order": 3,
+      "mode": 0,
+      "pos": [
+        460,
+        80
+      ],
+      "flags": {},
+      "title": "Upload your full-body reference",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "widgets_values": [
+        "",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      2,
+      0,
+      3,
+      5,
+      "VAE"
+    ],
+    [
+      1,
+      1,
+      0,
+      3,
+      25,
+      "IMAGE"
+    ],
+    [
+      3,
+      5,
+      0,
+      3,
+      26,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "version": 0.4
+}

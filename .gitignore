@@ -1,0 +1,9 @@
+# Only reviewed public release files may be added normally.
+*
+!.gitignore
+!README.md
+!PRIVACY.md
+!SHA256SUMS.txt
+!workflows/
+workflows/*
+!workflows/01 - Create Character Reference.json
