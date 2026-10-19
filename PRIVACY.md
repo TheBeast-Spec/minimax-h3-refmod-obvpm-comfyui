@@ -1,6 +1,6 @@
 # Public release privacy
 
-The release contains one blank workflow and text documentation.
+The release contains two cleaned workflow configurations, documentation and an upstream license. No media is included.
 
 ## Removed from the workflow
 
@@ -9,18 +9,25 @@ The release contains one blank workflow and text documentation.
 - Original free-text notes.
 - Workflow and session UUIDs, revision and viewport metadata.
 - Nonstandard duplicated widget metadata and unrecognized node properties.
+- Timeline clip paths, pin/bridge state and the pending upscale operation.
+- Cached result previews, live previews and previous result decisions.
+- Saved character RefMod selections and personal scene prompts.
+- Model download metadata and personal model subfolder prefixes.
 
-Only the functional graph, generic settings, public model filename, node identifiers and new setup instructions remain. The JSON contains no embedded media, preview images or encoded binary payloads. Reference images, saved RefMod weights and generated results are not included.
+Workflow 2 starts with an empty timeline, blank scene prompt, `(none)` character selections and the generic `my_film` project folder. It uses the later corrected-upscale source, preserving its graph wiring. Subgraph and port UUIDs are regenerated consistently: these identifiers are necessary for the nested graph and are not retained session identifiers.
+
+Only the functional graphs, generic settings, public model filenames, necessary node configuration, public upstream credits and setup instructions remain. The JSON contains no embedded media, preview images or encoded binary payloads. Reference images, saved RefMod weights and generated results are not included.
 
 ## Publication checks
 
 - Parse the workflow and verify node types, all links, socket indices and widget order.
 - Verify both image loaders are blank and character fields are generic or empty.
+- Verify all eight timeline subgraphs and their boundary connections; verify timeline and result state is cleared.
 - Scan release files for local paths, private addresses, credential patterns, encoded media and personal identifiers.
 - Check the exact Git file list and commit contents before pushing.
 - Use the GitHub account's no-reply commit email.
-- Publish from a new repository history containing only the reviewed release.
+- Keep the repository history limited to reviewed release files; private originals are never staged.
 
 The GitHub account name and normal Git commit timestamps remain public. The `.gitignore` allows only the reviewed release filenames; it does not sanitize later edits to those files. Review any future re-export before publishing it.
 
-The release is structurally checked. A new image-extraction run is not part of the public package; users must supply their own inputs and installed models.
+The release is structurally checked, including its embedded subgraphs. Fresh extraction and video-generation runs have not been performed after sanitization; users must supply their own inputs and installed models.

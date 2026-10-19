@@ -3,7 +3,12 @@
 !.gitignore
 !README.md
 !PRIVACY.md
+!THIRD_PARTY_NOTICES.md
 !SHA256SUMS.txt
 !workflows/
 workflows/*
 !workflows/01 - Create Character Reference.json
+!workflows/02 - Make and Extend Video.json
+!licenses/
+licenses/*
+!licenses/OBVPM-GPL-3.0.txt
