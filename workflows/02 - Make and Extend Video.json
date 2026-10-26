@@ -1,20 +1,20 @@
 {
-  "last_node_id": 1647,
-  "last_link_id": 3055,
+  "last_node_id": 1663,
+  "last_link_id": 3076,
   "version": 0.4,
   "nodes": [
     {
       "id": 1374,
       "type": "Unbundle (obvpm)",
       "pos": [
-        -42.8456499545847,
-        1279.5234144609587
+        -1014.7359822500842,
+        1314.8649258001062
       ],
       "size": [
         114.53515625,
         86
       ],
-      "order": 52,
+      "order": 58,
       "mode": 0,
       "widgets_values": [
         "",
@@ -27,6 +27,7 @@
       "inputs": [
         {
           "label": " ",
+          "localized_name": " ",
           "name": "in",
           "shape": 7,
           "type": "OBVPM_BUNDLE",
@@ -36,6 +37,7 @@
       "outputs": [
         {
           "label": "clip",
+          "localized_name": "clip",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -44,6 +46,7 @@
         },
         {
           "label": "video_vae",
+          "localized_name": "video_vae",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -52,6 +55,7 @@
         },
         {
           "label": "audio_vae",
+          "localized_name": "audio_vae",
           "name": "out_3",
           "type": "*",
           "links": [
@@ -64,14 +68,14 @@
       "id": 1373,
       "type": "SetNode",
       "pos": [
-        -232.84564995458473,
-        1239.5234144609587
+        -1204.735982250084,
+        1274.8649258001062
       ],
       "size": [
         250,
         60
       ],
-      "order": 37,
+      "order": 41,
       "mode": 0,
       "title": "Set_h3_clip_vaes",
       "widgets_values": [
@@ -103,8 +107,8 @@
       "id": 1390,
       "type": "Unbundle (obvpm)",
       "pos": [
-        -102.84564995458487,
-        1619.5234144609592
+        -1074.7359822500841,
+        1654.8649258001067
       ],
       "size": [
         144,
@@ -140,6 +144,7 @@
       "outputs": [
         {
           "label": "prompt",
+          "localized_name": "prompt",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -148,6 +153,7 @@
         },
         {
           "label": "width",
+          "localized_name": "width",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -156,6 +162,7 @@
         },
         {
           "label": "height",
+          "localized_name": "height",
           "name": "out_3",
           "type": "*",
           "links": [
@@ -168,14 +175,14 @@
       "id": 797,
       "type": "MiniMaxH3ReferenceToVideo",
       "pos": [
-        77.15435004541561,
-        1169.5234144609587
+        -894.7359822500841,
+        1204.8649258001062
       ],
       "size": [
         280,
         610
       ],
-      "order": 58,
+      "order": 66,
       "mode": 0,
       "widgets_values": [
         "",
@@ -190,17 +197,20 @@
       },
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 2543
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 2544
         },
         {
+          "localized_name": "audio_vae",
           "name": "audio_vae",
           "shape": 7,
           "type": "VAE",
@@ -208,6 +218,7 @@
         },
         {
           "label": "ref_image_0",
+          "localized_name": "ref_image_0",
           "name": "ref_images.ref_image_0",
           "shape": 7,
           "type": "IMAGE",
@@ -215,6 +226,7 @@
         },
         {
           "label": "ref_video_0",
+          "localized_name": "ref_video_0",
           "name": "ref_videos.ref_video_0",
           "shape": 7,
           "type": "IMAGE",
@@ -222,6 +234,7 @@
         },
         {
           "label": "ref_video_audio_0",
+          "localized_name": "ref_video_audio_0",
           "name": "ref_video_audios.ref_video_audio_0",
           "shape": 7,
           "type": "AUDIO",
@@ -229,12 +242,14 @@
         },
         {
           "label": "ref_audio_0",
+          "localized_name": "ref_audio_0",
           "name": "ref_audios.ref_audio_0",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "prompt",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -243,6 +258,7 @@
           "link": 2584
         },
         {
+          "localized_name": "width",
           "name": "width",
           "type": "INT",
           "widget": {
@@ -251,6 +267,7 @@
           "link": 2585
         },
         {
+          "localized_name": "height",
           "name": "height",
           "type": "INT",
           "widget": {
@@ -259,6 +276,7 @@
           "link": 2586
         },
         {
+          "localized_name": "length",
           "name": "length",
           "type": "INT",
           "widget": {
@@ -267,84 +285,107 @@
           "link": 3051
         },
         {
+          "localized_name": "ref_image_size",
+          "name": "ref_image_size",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref_image_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_1",
           "name": "ref_images.ref_image_1",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_2",
           "name": "ref_images.ref_image_2",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_3",
           "name": "ref_images.ref_image_3",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_4",
           "name": "ref_images.ref_image_4",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_5",
           "name": "ref_images.ref_image_5",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_6",
           "name": "ref_images.ref_image_6",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_7",
           "name": "ref_images.ref_image_7",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_image_8",
           "name": "ref_images.ref_image_8",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_video_1",
           "name": "ref_videos.ref_video_1",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_video_2",
           "name": "ref_videos.ref_video_2",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "ref_video_audio_1",
           "name": "ref_video_audios.ref_video_audio_1",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "ref_video_audio_2",
           "name": "ref_video_audios.ref_video_audio_2",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "ref_audio_1",
           "name": "ref_audios.ref_audio_1",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "ref_audio_2",
           "name": "ref_audios.ref_audio_2",
           "shape": 7,
           "type": "AUDIO",
@@ -353,6 +394,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
@@ -360,6 +402,7 @@
           ]
         },
         {
+          "localized_name": "LATENT",
           "name": "LATENT",
           "type": "LATENT",
           "links": [
@@ -372,14 +415,14 @@
       "id": 1376,
       "type": "Unbundle (obvpm)",
       "pos": [
-        297.1543500454159,
-        1069.5234144609583
+        -674.7359822500838,
+        1104.8649258001058
       ],
       "size": [
         114.53515625,
         86
       ],
-      "order": 38,
+      "order": 42,
       "mode": 0,
       "widgets_values": [
         "clip\nvideo_vae\naudio_vae",
@@ -405,6 +448,7 @@
       "inputs": [
         {
           "label": " ",
+          "localized_name": " ",
           "name": "in",
           "shape": 7,
           "type": "OBVPM_BUNDLE",
@@ -414,12 +458,14 @@
       "outputs": [
         {
           "label": "clip",
+          "localized_name": "clip",
           "name": "out_1",
           "type": "*",
           "links": []
         },
         {
           "label": "video_vae",
+          "localized_name": "video_vae",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -428,6 +474,7 @@
         },
         {
           "label": "audio_vae",
+          "localized_name": "audio_vae",
           "name": "out_3",
           "type": "*",
           "links": [
@@ -440,14 +487,14 @@
       "id": 1350,
       "type": "LTXVSeparateAVLatent",
       "pos": [
-        3737.9128415384735,
-        1085.7849153005081
+        3075.083814295052,
+        1021.6401505216705
       ],
       "size": [
         200,
         50
       ],
-      "order": 65,
+      "order": 73,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -455,6 +502,7 @@
       },
       "inputs": [
         {
+          "localized_name": "av_latent",
           "name": "av_latent",
           "type": "LATENT",
           "link": 2487
@@ -462,6 +510,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "video_latent",
           "name": "video_latent",
           "type": "LATENT",
           "links": [
@@ -469,6 +518,7 @@
           ]
         },
         {
+          "localized_name": "audio_latent",
           "name": "audio_latent",
           "type": "LATENT",
           "links": [
@@ -482,14 +532,14 @@
       "id": 1352,
       "type": "LTXVConcatAVLatent",
       "pos": [
-        4367.912841538468,
-        1085.7849153005081
+        3705.0838142950493,
+        1021.6401505216705
       ],
       "size": [
         180,
         50
       ],
-      "order": 75,
+      "order": 83,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -497,11 +547,13 @@
       },
       "inputs": [
         {
+          "localized_name": "video_latent",
           "name": "video_latent",
           "type": "LATENT",
           "link": 2489
         },
         {
+          "localized_name": "audio_latent",
           "name": "audio_latent",
           "type": "LATENT",
           "link": 2490
@@ -509,6 +561,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -521,14 +574,14 @@
       "id": 1365,
       "type": "CleanVRAM (obvpm)",
       "pos": [
-        4567.912841538468,
-        1205.7849153005088
+        3905.083814295053,
+        1141.6401505216713
       ],
       "size": [
         190,
         50
       ],
-      "order": 78,
+      "order": 86,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -536,6 +589,7 @@
       },
       "inputs": [
         {
+          "localized_name": "anything",
           "name": "anything",
           "type": "*",
           "link": 2714
@@ -543,6 +597,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "output",
           "name": "output",
           "type": "*",
           "links": [
@@ -555,8 +610,8 @@
       "id": 1476,
       "type": "GetNode",
       "pos": [
-        387.15435004541627,
-        1459.5234144609592
+        -584.7359822500832,
+        1494.8649258001067
       ],
       "size": [
         210,
@@ -587,8 +642,8 @@
       "id": 1490,
       "type": "GetNode",
       "pos": [
-        507.15435004541627,
-        1069.5234144609583
+        -464.73598225008317,
+        1104.8649258001058
       ],
       "size": [
         210,
@@ -619,8 +674,8 @@
       "id": 1489,
       "type": "GetNode",
       "pos": [
-        517.1543500454163,
-        1009.5234144609585
+        -454.73598225008317,
+        1044.864925800106
       ],
       "size": [
         210,
@@ -651,8 +706,8 @@
       "id": 1379,
       "type": "Unbundle (obvpm)",
       "pos": [
-        857.1543500454178,
-        1069.5234144609583
+        -114.73598225008172,
+        1104.8649258001058
       ],
       "size": [
         171,
@@ -688,12 +743,14 @@
       "outputs": [
         {
           "label": "clip",
+          "localized_name": "clip",
           "name": "out_1",
           "type": "*",
           "links": []
         },
         {
           "label": "video_vae",
+          "localized_name": "video_vae",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -702,6 +759,7 @@
         },
         {
           "label": "audio_vae",
+          "localized_name": "audio_vae",
           "name": "out_3",
           "type": "*",
           "links": [
@@ -714,8 +772,8 @@
       "id": 1294,
       "type": "GetNode",
       "pos": [
-        1047.154350045419,
-        1329.5234144609587
+        75.26401774991987,
+        1364.8649258001062
       ],
       "size": [
         210,
@@ -746,8 +804,8 @@
       "id": 1491,
       "type": "GetNode",
       "pos": [
-        587.1543500454165,
-        1419.5234144609587
+        -384.73598225008294,
+        1454.8649258001062
       ],
       "size": [
         210,
@@ -778,14 +836,14 @@
       "id": 1349,
       "type": "H3JointLatent",
       "pos": [
-        3447.912841538477,
-        1145.7849153005084
+        2785.0838142950556,
+        1081.6401505216709
       ],
       "size": [
         250,
         130
       ],
-      "order": 61,
+      "order": 69,
       "mode": 0,
       "widgets_values": [
         ""
@@ -798,6 +856,7 @@
       },
       "inputs": [
         {
+          "localized_name": "sequence",
           "name": "sequence",
           "type": "STRING",
           "widget": {
@@ -808,6 +867,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "shape": 6,
           "type": "LATENT",
@@ -816,6 +876,7 @@
           ]
         },
         {
+          "localized_name": "layout",
           "name": "layout",
           "shape": 6,
           "type": "OBVPM_H3_JOINT",
@@ -824,6 +885,7 @@
           ]
         },
         {
+          "localized_name": "info",
           "name": "info",
           "type": "STRING",
           "links": []
@@ -834,8 +896,8 @@
       "id": 1478,
       "type": "GetNode",
       "pos": [
-        5157.912841538467,
-        1035.784915300508
+        4495.083814295048,
+        971.6401505216699
       ],
       "size": [
         210,
@@ -866,8 +928,8 @@
       "id": 1436,
       "type": "Unbundle (obvpm)",
       "pos": [
-        5727.9128415384685,
-        1075.7849153005081
+        5065.08381429505,
+        1011.6401505216704
       ],
       "size": [
         199,
@@ -901,6 +963,7 @@
       "outputs": [
         {
           "label": "video_vae",
+          "localized_name": "video_vae",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -909,6 +972,7 @@
         },
         {
           "label": "audio_vae",
+          "localized_name": "audio_vae",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -921,8 +985,8 @@
       "id": 1297,
       "type": "GetNode",
       "pos": [
-        5737.9128415384685,
-        1145.7849153005084
+        5075.08381429505,
+        1081.6401505216709
       ],
       "size": [
         210,
@@ -953,14 +1017,14 @@
       "id": 1362,
       "type": "H3JointConditioning",
       "pos": [
-        4797.912841538467,
-        965.7849153005084
+        4135.083814295049,
+        901.6401505216701
       ],
       "size": [
         260,
         50
       ],
-      "order": 51,
+      "order": 55,
       "mode": 0,
       "color": "#233",
       "bgcolor": "#355",
@@ -970,6 +1034,7 @@
       },
       "inputs": [
         {
+          "localized_name": "layout",
           "name": "layout",
           "type": "OBVPM_H3_JOINT",
           "link": 3044
@@ -977,6 +1042,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "links": [
@@ -990,14 +1056,14 @@
       "id": 1363,
       "type": "H3JointAudioMask",
       "pos": [
-        4797.912841538467,
-        1085.7849153005081
+        4135.083814295049,
+        1021.6401505216705
       ],
       "size": [
         260,
         60
       ],
-      "order": 80,
+      "order": 88,
       "mode": 0,
       "widgets_values": [
         0
@@ -1010,13 +1076,24 @@
       },
       "inputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "link": 2715
+        },
+        {
+          "localized_name": "audio_denoise",
+          "name": "audio_denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_denoise"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -1027,10 +1104,10 @@
     },
     {
       "id": 752,
-      "type": "08f784cf-364c-56a7-9bfe-4b937c77fa0b",
+      "type": "d07e12ad-b633-5b91-9bea-575f250d9bbd",
       "pos": [
-        -492.84564995458464,
-        1039.5234144609583
+        -1464.7359822500835,
+        1074.8649258001058
       ],
       "size": [
         410,
@@ -1092,8 +1169,8 @@
       "id": 1480,
       "type": "GetNode",
       "pos": [
-        5257.912841538466,
-        1165.7849153005086
+        4595.083814295047,
+        1101.640150521671
       ],
       "size": [
         210,
@@ -1124,8 +1201,8 @@
       "id": 1499,
       "type": "Unbundle (obvpm)",
       "pos": [
-        5137.912841538467,
-        1125.7849153005084
+        4475.083814295048,
+        1061.6401505216709
       ],
       "size": [
         202,
@@ -1161,6 +1238,7 @@
       "outputs": [
         {
           "label": "refine_amount",
+          "localized_name": "refine_amount",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -1205,14 +1283,14 @@
       "id": 1216,
       "type": "H3TrimAndSaveVideoWithMCtx",
       "pos": [
-        1287.1543500454197,
-        1169.5234144609587
+        315.26401774992104,
+        1204.8649258001062
       ],
       "size": [
         330,
         230
       ],
-      "order": 79,
+      "order": 87,
       "mode": 0,
       "widgets_values": [
         "my_film",
@@ -1229,44 +1307,88 @@
       },
       "inputs": [
         {
+          "localized_name": "samples",
           "name": "samples",
           "type": "LATENT",
           "link": 2732
         },
         {
+          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 2208
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": 2209
         },
         {
+          "localized_name": "pins",
           "name": "pins",
           "shape": 7,
           "type": "OBVPM_H3_PINS",
           "link": 2262
         },
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "shape": 7,
           "type": "CONDITIONING",
           "link": 2309
         },
         {
+          "localized_name": "base_folder",
           "name": "base_folder",
           "type": "STRING",
           "widget": {
             "name": "base_folder"
           },
           "link": 2418
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "crf",
+          "name": "crf",
+          "type": "INT",
+          "widget": {
+            "name": "crf"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_conditioning",
+          "name": "save_conditioning",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_conditioning"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "metadata",
+          "name": "metadata",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "metadata"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "path",
           "name": "path",
           "type": "STRING",
           "links": [
@@ -1274,11 +1396,13 @@
           ]
         },
         {
+          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "links": null
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": null
@@ -1289,8 +1413,8 @@
       "id": 1463,
       "type": "GetNode",
       "pos": [
-        1392.2622399640738,
-        1373.7357609043536
+        420.3719076685755,
+        1409.077272243501
       ],
       "size": [
         210,
@@ -1328,7 +1452,7 @@
         210,
         60
       ],
-      "order": 42,
+      "order": 46,
       "mode": 0,
       "title": "Set_seed",
       "widgets_values": [
@@ -1365,7 +1489,7 @@
         250,
         60
       ],
-      "order": 43,
+      "order": 47,
       "mode": 0,
       "title": "Set_h3_input",
       "widgets_values": [
@@ -1402,7 +1526,7 @@
         210,
         60
       ],
-      "order": 44,
+      "order": 48,
       "mode": 0,
       "title": "Set_base_folder",
       "widgets_values": [
@@ -1432,8 +1556,8 @@
       "id": 118,
       "type": "MarkdownNote",
       "pos": [
-        -1286.5821032412518,
-        350.06009768446575
+        -2120,
+        1000
       ],
       "size": [
         560,
@@ -1441,9 +1565,9 @@
       ],
       "order": 15,
       "mode": 0,
-      "title": "Start here - public tutorial workflow",
+      "title": "Megapixels → resolution",
       "widgets_values": [
-        "Create your own character references with Workflow 1, then refresh and select them here. Write your own scene prompt and choose a new project folder before running. The timeline starts empty in generation mode. Add accepted results to the timeline, then choose extend, loop, prepend or bridge as needed. Build and inspect the full sequence before upscaling. The default upscale target is 2 megapixels, not 4K. See the repository README for dependencies, model selection and credits."
+        "| megapixels | 16:9 | 4:3 |\n|---|---|---|\n| 0.1 | 416 x 256 | 384 x 288 |\n| 0.2 | 608 x 352 | 544 x 384 |\n| 0.3 | 736 x 416 | 640 x 480 |\n| 0.4 | 864 x 480 ~ 480p | 736 x 576 |\n| 0.5 | 960 x 544 | 832 x 640 |\n| 0.6 | 1056 x 608 | 928 x 672 |\n| 0.7 | 1152 x 640 | 992 x 736 |\n| 0.8 | 1216 x 672 | 1056 x 800 |\n| 0.9 | 1280 x 736 ~ 720p | 1120 x 832 |\n| 0.98 | 1344 x 768 | 1184 x 864 |\n| 1.0 | 1376 x 768 | 1184 x 896 |\n| 1.2 | 1504 x 832 | 1280 x 960 |\n| 1.5 | 1664 x 928 | 1440 x 1088 |\n| 1.8 | 1824 x 1024 | 1600 x 1184 |\n| 2.0 | 1920 x 1088 ~ 1080p | 1664 x 1248 |\n| 2.5 | 2144 x 1216 | 1856 x 1408 |\n| 3.0 | 2368 x 1344 | 2048 x 1536 |\n| 3.5 | 2560 x 1440 = 1440p | 2208 x 1664 |\n| 4.0 | 2720 x 1536 | 2368 x 1760 |\n| 5.0 | 3040 x 1728 | 2656 x 1984 |\n| 6.0 | 3360 x 1888 | 2912 x 2176 |\n| 7.0 | 3616 x 2016 | 3136 x 2336 |\n| 7.9 | 3840 x 2144 ~ 4K UHD | 3328 x 2496 |\n| 8.0 | 3872 x 2176 ~ 4K UHD | 3360 x 2496 |\n\nNote: full resolution table is included only for reference. Extremely high resolutions above 2.0 will likely not work due to speed and VRAM issues\n"
       ],
       "color": "#432",
       "bgcolor": "#653",
@@ -1456,14 +1580,14 @@
       "id": 1479,
       "type": "SetNode",
       "pos": [
-        3000,
-        120
+        2483.742988428594,
+        84.81761933572619
       ],
       "size": [
         310,
         60
       ],
-      "order": 53,
+      "order": 59,
       "mode": 0,
       "title": "Set_pin_specs",
       "widgets_values": [
@@ -1493,14 +1617,14 @@
       "id": 1462,
       "type": "SetNode",
       "pos": [
-        1484.8028330210343,
-        976.7460849498503
+        512.912500725536,
+        1012.0875962889977
       ],
       "size": [
         210,
         60
       ],
-      "order": 81,
+      "order": 89,
       "mode": 0,
       "title": "Set_gen_result",
       "widgets_values": [
@@ -1537,7 +1661,7 @@
         210,
         60
       ],
-      "order": 85,
+      "order": 93,
       "mode": 0,
       "title": "Set_upscale_result",
       "widgets_values": [
@@ -1567,14 +1691,14 @@
       "id": 1351,
       "type": "MinimaxH3LatentUpscaler3D",
       "pos": [
-        3967.912841538471,
-        865.7849153005089
+        3305.0838142950497,
+        801.6401505216706
       ],
       "size": [
         370,
         230
       ],
-      "order": 70,
+      "order": 78,
       "mode": 0,
       "title": "H3 Latent Upscaler 3D",
       "widgets_values": [
@@ -1595,21 +1719,87 @@
       },
       "inputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "*",
           "link": 2488
         },
         {
+          "localized_name": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mode",
+          "name": "mode",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "megapixels",
           "name": "mode.megapixels",
           "type": "FLOAT",
           "widget": {
             "name": "mode.megapixels"
           },
           "link": 2757
+        },
+        {
+          "localized_name": "align",
+          "name": "align",
+          "type": "INT",
+          "widget": {
+            "name": "align"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "enable_temporal_chunking",
+          "name": "enable_temporal_chunking",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "enable_temporal_chunking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_unload",
+          "name": "force_unload",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "force_unload"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "*",
           "links": [
@@ -1622,8 +1812,8 @@
       "id": 1502,
       "type": "Unbundle (obvpm)",
       "pos": [
-        3707.912841538474,
-        975.7849153005079
+        3045.0838142950524,
+        911.6401505216696
       ],
       "size": [
         202,
@@ -1659,6 +1849,7 @@
       "outputs": [
         {
           "label": "upscale_to_megapixels",
+          "localized_name": "upscale_to_megapixels",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -1671,14 +1862,14 @@
       "id": 1449,
       "type": "Bundle (obvpm)",
       "pos": [
-        3000,
-        180
+        2518.417712911438,
+        134.5262956373108
       ],
       "size": [
         197,
         130
       ],
-      "order": 54,
+      "order": 60,
       "mode": 0,
       "title": "Set h3_timeline_outputs",
       "widgets_values": [
@@ -1698,6 +1889,7 @@
       "inputs": [
         {
           "label": "length",
+          "localized_name": "length",
           "name": "in_1",
           "shape": 7,
           "type": "*",
@@ -1705,6 +1897,7 @@
         },
         {
           "label": "sequence",
+          "localized_name": "sequence",
           "name": "in_2",
           "shape": 7,
           "type": "*",
@@ -1712,6 +1905,7 @@
         },
         {
           "label": "upscaling",
+          "localized_name": "upscaling",
           "name": "in_3",
           "shape": 7,
           "type": "*",
@@ -1719,6 +1913,7 @@
         },
         {
           "label": "+",
+          "localized_name": "+",
           "name": "in_4",
           "shape": 7,
           "type": "*",
@@ -1728,6 +1923,7 @@
       "outputs": [
         {
           "label": " ",
+          "localized_name": " ",
           "name": "out",
           "type": "OBVPM_BUNDLE",
           "links": []
@@ -1736,16 +1932,16 @@
     },
     {
       "id": 751,
-      "type": "322ee1bc-d1cc-5ad8-ac37-2fca60cb67ba",
+      "type": "7924d492-84a0-57be-8a3d-4fe3039bf0ce",
       "pos": [
-        1057.1543500454186,
-        1069.5234144609583
+        85.26401774991947,
+        1104.8649258001058
       ],
       "size": [
         190,
         80
       ],
-      "order": 76,
+      "order": 84,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -1794,14 +1990,14 @@
       "id": 1366,
       "type": "CleanVRAM (obvpm)",
       "pos": [
-        5697.912841538468,
-        945.7849153005087
+        5035.083814295049,
+        881.6401505216704
       ],
       "size": [
         220,
         50
       ],
-      "order": 83,
+      "order": 91,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -1809,6 +2005,7 @@
       },
       "inputs": [
         {
+          "localized_name": "anything",
           "name": "anything",
           "type": "*",
           "link": 2628
@@ -1816,6 +2013,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "output",
           "name": "output",
           "type": "*",
           "links": [
@@ -1828,8 +2026,8 @@
       "id": 1466,
       "type": "GetNode",
       "pos": [
-        3720,
-        170
+        3107.0607537493856,
+        162.87282131384356
       ],
       "size": [
         210,
@@ -1858,16 +2056,16 @@
     },
     {
       "id": 1457,
-      "type": "90a2d8a5-8705-5aef-8e2e-37eec6ae0113",
+      "type": "25acf645-073f-5c23-9ead-658faf6a7821",
       "pos": [
-        4040,
-        80
+        3427.0607537493856,
+        72.8728213138435
       ],
       "size": [
         270,
         80
       ],
-      "order": 47,
+      "order": 51,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -1876,6 +2074,7 @@
       "inputs": [
         {
           "label": "h3_gen_settings",
+          "localized_name": "on_false",
           "name": "on_false",
           "shape": 7,
           "type": "*",
@@ -1883,6 +2082,7 @@
         },
         {
           "label": "h3_upscale_settings",
+          "localized_name": "on_true",
           "name": "on_true",
           "shape": 7,
           "type": "*",
@@ -1899,6 +2099,7 @@
       "outputs": [
         {
           "label": "h3_engine_settings",
+          "localized_name": "value",
           "name": "value",
           "type": "*",
           "links": [
@@ -1911,14 +2112,14 @@
       "id": 708,
       "type": "Power Lora Loader (rgthree)",
       "pos": [
-        5330,
-        70
+        4717.06075374939,
+        62.872821313843495
       ],
       "size": [
         460,
         170
       ],
-      "order": 68,
+      "order": 76,
       "mode": 0,
       "title": "H3 Content LoRAs",
       "widgets_values": [
@@ -1969,16 +2170,16 @@
     },
     {
       "id": 1488,
-      "type": "5f6ff352-7ffa-55e4-8e4a-17f25a83becf",
+      "type": "f5c08862-2f18-566b-b9b3-c2af2e7ce50d",
       "pos": [
-        767.1543500454171,
-        1129.5234144609587
+        -204.73598225008237,
+        1164.8649258001062
       ],
       "size": [
         250,
         150
       ],
-      "order": 72,
+      "order": 80,
       "mode": 0,
       "widgets_values": [
         0,
@@ -1990,6 +2191,7 @@
       },
       "inputs": [
         {
+          "localized_name": "noise_seed",
           "name": "noise_seed",
           "type": "INT",
           "widget": {
@@ -1998,17 +2200,20 @@
           "link": 2730
         },
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 2727
         },
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "link": 2733
         },
         {
           "label": "latent",
+          "localized_name": "latent_image",
           "name": "latent_image",
           "type": "LATENT",
           "link": 2734
@@ -2019,11 +2224,20 @@
           "shape": 7,
           "type": "OBVPM_BUNDLE",
           "link": 2729
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
           "label": "samples",
+          "localized_name": "output",
           "name": "output",
           "type": "LATENT",
           "links": [
@@ -2035,16 +2249,16 @@
     },
     {
       "id": 1359,
-      "type": "2d5c61ff-9a0e-553f-853d-b589ff47e924",
+      "type": "6671dd33-52e9-5b69-9378-71a3eaba378f",
       "pos": [
-        5407.912841538467,
-        945.7849153005087
+        4745.083814295048,
+        881.6401505216704
       ],
       "size": [
         250,
         150
       ],
-      "order": 82,
+      "order": 90,
       "mode": 0,
       "widgets_values": [
         0,
@@ -2056,6 +2270,7 @@
       },
       "inputs": [
         {
+          "localized_name": "noise_seed",
           "name": "noise_seed",
           "type": "INT",
           "widget": {
@@ -2064,17 +2279,20 @@
           "link": 2726
         },
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 2504
         },
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "link": 2524
         },
         {
           "label": "latent",
+          "localized_name": "latent_image",
           "name": "latent_image",
           "type": "LATENT",
           "link": 2716
@@ -2098,6 +2316,7 @@
       "outputs": [
         {
           "label": "samples",
+          "localized_name": "output",
           "name": "output",
           "type": "LATENT",
           "links": [
@@ -2110,14 +2329,14 @@
       "id": 1228,
       "type": "H3MCtxApplyPins",
       "pos": [
-        397.15435004541627,
-        1129.5234144609587
+        -574.7359822500832,
+        1164.8649258001062
       ],
       "size": [
         290,
         210
       ],
-      "order": 67,
+      "order": 75,
       "mode": 0,
       "widgets_values": [
         true,
@@ -2133,36 +2352,80 @@
       },
       "inputs": [
         {
+          "localized_name": "video_vae",
           "name": "video_vae",
           "shape": 7,
           "type": "VAE",
           "link": 2547
         },
         {
+          "localized_name": "audio_vae",
           "name": "audio_vae",
           "shape": 7,
           "type": "VAE",
           "link": 2548
         },
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "link": 3041
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "link": 2259
         },
         {
+          "localized_name": "pin_specs",
           "name": "pin_specs",
           "shape": 7,
           "type": "OBVPM_H3_PINSPECS",
           "link": 2725
+        },
+        {
+          "localized_name": "snap_window_down_to_available",
+          "name": "snap_window_down_to_available",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "snap_window_down_to_available"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "freeze_audio",
+          "name": "freeze_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "freeze_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "masked_audio_feather",
+          "name": "masked_audio_feather",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "masked_audio_feather"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_denoise",
+          "name": "audio_denoise",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_denoise"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "links": [
@@ -2171,6 +2434,7 @@
           ]
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -2178,6 +2442,7 @@
           ]
         },
         {
+          "localized_name": "pins",
           "name": "pins",
           "type": "OBVPM_H3_PINS",
           "links": [
@@ -2190,14 +2455,14 @@
       "id": 1356,
       "type": "H3ContextWindows",
       "pos": [
-        5087.912841538467,
-        865.7849153005089
+        4425.083814295048,
+        801.6401505216706
       ],
       "size": [
         280,
         90
       ],
-      "order": 41,
+      "order": 45,
       "mode": 0,
       "widgets_values": [
         3,
@@ -2211,13 +2476,33 @@
       },
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 2728
+        },
+        {
+          "localized_name": "window_seconds",
+          "name": "window_seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "window_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "overlap_seconds",
+          "name": "overlap_seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "overlap_seconds"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -2230,8 +2515,8 @@
       "id": 1400,
       "type": "GetNode",
       "pos": [
-        4847.912841538467,
-        865.7849153005089
+        4185.083814295048,
+        801.6401505216706
       ],
       "size": [
         210,
@@ -2262,14 +2547,14 @@
       "id": 1342,
       "type": "H3ResultPreview",
       "pos": [
-        6720,
-        570
+        5868.300346064862,
+        580.6908463309495
       ],
       "size": [
         1720,
         1130
       ],
-      "order": 39,
+      "order": 43,
       "mode": 0,
       "title": "H3 Upscale Result",
       "widgets_values": [],
@@ -2279,6 +2564,7 @@
       },
       "inputs": [
         {
+          "localized_name": "path",
           "name": "path",
           "shape": 7,
           "type": "STRING",
@@ -2291,8 +2577,8 @@
       "id": 765,
       "type": "SeedNode",
       "pos": [
-        777.3863636363641,
-        44.74746704101579
+        624.2401164901431,
+        47.69258220058459
       ],
       "size": [
         480,
@@ -2302,15 +2588,26 @@
       "mode": 0,
       "widgets_values": [
         1,
-        "increment"
+        "fixed"
       ],
       "flags": {},
       "properties": {
         "Node name for S&R": "SeedNode"
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "seed",
           "name": "seed",
           "type": "INT",
           "links": [
@@ -2323,14 +2620,14 @@
       "id": 1218,
       "type": "H3ResultPreview",
       "pos": [
-        1700,
-        1250
+        1273.8514961992248,
+        1202.5372698726853
       ],
       "size": [
         1220,
         835
       ],
-      "order": 40,
+      "order": 44,
       "mode": 0,
       "widgets_values": [],
       "flags": {},
@@ -2339,6 +2636,7 @@
       },
       "inputs": [
         {
+          "localized_name": "path",
           "name": "path",
           "shape": 7,
           "type": "STRING",
@@ -2351,14 +2649,14 @@
       "id": 1438,
       "type": "SetNode",
       "pos": [
-        5480,
-        350
+        4867.06075374939,
+        342.8728213138434
       ],
       "size": [
         220,
         50
       ],
-      "order": 69,
+      "order": 77,
       "mode": 0,
       "title": "Set_optimized_model",
       "widgets_values": [
@@ -2390,14 +2688,14 @@
       "id": 1232,
       "type": "H3LivePreview",
       "pos": [
-        5740,
-        330
+        5127.06075374939,
+        322.8728213138434
       ],
       "size": [
         300,
         120
       ],
-      "order": 74,
+      "order": 82,
       "mode": 0,
       "widgets_values": [
         "taeh3.safetensors",
@@ -2409,13 +2707,33 @@
       },
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 2763
+        },
+        {
+          "localized_name": "tiny_vae",
+          "name": "tiny_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "tiny_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_size",
+          "name": "max_size",
+          "type": "INT",
+          "widget": {
+            "name": "max_size"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "slot_index": 0,
@@ -2429,14 +2747,14 @@
       "id": 1470,
       "type": "SetNode",
       "pos": [
-        6080,
-        350
+        5467.06075374939,
+        342.8728213138434
       ],
       "size": [
         210,
         60
       ],
-      "order": 77,
+      "order": 85,
       "mode": 0,
       "title": "Set_previewed_model",
       "widgets_values": [
@@ -2466,18 +2784,18 @@
       "id": 1517,
       "type": "H3VramHeadroom",
       "pos": [
-        5140,
-        330
+        4527.06075374939,
+        322.8728213138434
       ],
       "size": [
         300,
         142
       ],
-      "order": 64,
+      "order": 72,
       "mode": 0,
       "widgets_values": [
         true,
-        3,
+        2,
         true
       ],
       "flags": {},
@@ -2486,13 +2804,42 @@
       },
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 2638
+        },
+        {
+          "localized_name": "enabled",
+          "name": "enabled",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "enabled"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "headroom_gb",
+          "name": "headroom_gb",
+          "type": "FLOAT",
+          "widget": {
+            "name": "headroom_gb"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "count_guides",
+          "name": "count_guides",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "count_guides"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -2505,8 +2852,8 @@
       "id": 1497,
       "type": "ValuePresets (obvpm)",
       "pos": [
-        7060,
-        70
+        6208.300346064862,
+        80.69084633094954
       ],
       "size": [
         310,
@@ -2532,9 +2879,20 @@
         "obvpm_constant": true,
         "obvpm_presets_type_id": "obvpm-h3-upscale-options"
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "preset",
+          "name": "preset",
+          "type": "STRING",
+          "widget": {
+            "name": "preset"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "bundle",
           "name": "bundle",
           "type": "OBVPM_BUNDLE",
           "links": []
@@ -2545,14 +2903,14 @@
       "id": 1434,
       "type": "H3JointRender",
       "pos": [
-        5977.9128415384685,
-        945.7849153005087
+        5315.08381429505,
+        881.6401505216704
       ],
       "size": [
         330,
         230
       ],
-      "order": 84,
+      "order": 92,
       "mode": 0,
       "widgets_values": [
         "my_film",
@@ -2568,49 +2926,84 @@
       },
       "inputs": [
         {
+          "localized_name": "samples",
           "name": "samples",
           "type": "LATENT",
           "link": 2629
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "link": 2634
         },
         {
+          "localized_name": "audio_vae",
           "name": "audio_vae",
           "type": "VAE",
           "link": 2635
         },
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "shape": 7,
           "type": "CONDITIONING",
           "link": 3048
         },
         {
+          "localized_name": "source_audio",
           "name": "source_audio",
           "shape": 7,
           "type": "LATENT",
           "link": 3046
         },
         {
+          "localized_name": "layout",
           "name": "layout",
           "shape": 7,
           "type": "OBVPM_H3_JOINT",
           "link": 3043
         },
         {
+          "localized_name": "base_folder",
           "name": "base_folder",
           "type": "STRING",
           "widget": {
             "name": "base_folder"
           },
           "link": 2636
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "crf",
+          "name": "crf",
+          "type": "INT",
+          "widget": {
+            "name": "crf"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "window_seconds",
+          "name": "window_seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "window_seconds"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "path",
           "name": "path",
           "type": "STRING",
           "links": [
@@ -2621,10 +3014,10 @@
     },
     {
       "id": 761,
-      "type": "43573b79-e442-5a6c-8be8-d534ad9757a8",
+      "type": "6b28046f-564b-5cb9-bcef-c3d0ccedb0ee",
       "pos": [
-        760.025218616833,
-        176.4836120605471
+        606.878971470612,
+        179.4287272201159
       ],
       "size": [
         596.299972534176,
@@ -2702,16 +3095,16 @@
     },
     {
       "id": 1334,
-      "type": "2efbffcb-30ba-5b5c-914b-c03b488e8b78",
+      "type": "7e03d7f9-cd33-5869-8d5e-0e574b2136ac",
       "pos": [
-        4800,
-        330
+        4187.06075374939,
+        322.8728213138434
       ],
       "size": [
         300,
         78
       ],
-      "order": 60,
+      "order": 68,
       "mode": 0,
       "flags": {},
       "properties": {
@@ -2747,14 +3140,14 @@
       "id": 1221,
       "type": "H3Timeline",
       "pos": [
-        1672.449866310216,
-        61.117891293253706
+        1254.242607681194,
+        51.546250846614946
       ],
       "size": [
         1220,
         1120
       ],
-      "order": 45,
+      "order": 49,
       "mode": 0,
       "widgets_values": [
         "",
@@ -2783,16 +3176,164 @@
       },
       "inputs": [
         {
+          "localized_name": "base_folder",
           "name": "base_folder",
           "type": "STRING",
           "widget": {
             "name": "base_folder"
           },
           "link": 2698
+        },
+        {
+          "localized_name": "preview_filename",
+          "name": "preview_filename",
+          "type": "STRING",
+          "widget": {
+            "name": "preview_filename"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "export_filename_prefix",
+          "name": "export_filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "export_filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "crf",
+          "name": "crf",
+          "type": "INT",
+          "widget": {
+            "name": "crf"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "restore_groups",
+          "name": "restore_groups",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "restore_groups"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "skip_restore_nodes",
+          "name": "skip_restore_nodes",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "skip_restore_nodes"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "level_lock",
+          "name": "level_lock",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "level_lock"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "level_lock_frames",
+          "name": "level_lock_frames",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "level_lock_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "level_lock_flicker",
+          "name": "level_lock_flicker",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "level_lock_flicker"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "crossfade",
+          "name": "crossfade",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "crossfade"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "crossfade_frames",
+          "name": "crossfade_frames",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "crossfade_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_declick",
+          "name": "audio_declick",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "audio_declick"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "level_lock_local",
+          "name": "level_lock_local",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "level_lock_local"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration_seconds",
+          "name": "duration_seconds",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "upscaling",
+          "name": "upscaling",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "upscaling"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "auto_add",
+          "name": "auto_add",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "auto_add"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "pin_specs",
           "name": "pin_specs",
           "type": "OBVPM_H3_PINSPECS",
           "links": [
@@ -2800,6 +3341,7 @@
           ]
         },
         {
+          "localized_name": "length",
           "name": "length",
           "type": "INT",
           "links": [
@@ -2807,6 +3349,7 @@
           ]
         },
         {
+          "localized_name": "sequence",
           "name": "sequence",
           "type": "STRING",
           "links": [
@@ -2814,6 +3357,7 @@
           ]
         },
         {
+          "localized_name": "upscaling",
           "name": "upscaling",
           "type": "BOOLEAN",
           "links": [
@@ -2826,14 +3370,14 @@
       "id": 725,
       "type": "UNETLoader",
       "pos": [
-        4990,
-        70
+        4377.06075374939,
+        62.872821313843495
       ],
       "size": [
         300,
         90
       ],
-      "order": 63,
+      "order": 71,
       "mode": 0,
       "widgets_values": [
         "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
@@ -2845,16 +3389,27 @@
       },
       "inputs": [
         {
+          "localized_name": "unet_name",
           "name": "unet_name",
           "type": "COMBO",
           "widget": {
             "name": "unet_name"
           },
           "link": 2825
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "MODEL",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -2867,8 +3422,8 @@
       "id": 1290,
       "type": "ValuePresets (obvpm)",
       "pos": [
-        3320,
-        70
+        2707.0607537493856,
+        62.872821313843495
       ],
       "size": [
         310,
@@ -2897,9 +3452,20 @@
           "vanilla 10 steps refine"
         ]
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "preset",
+          "name": "preset",
+          "type": "STRING",
+          "widget": {
+            "name": "preset"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "bundle",
           "name": "bundle",
           "type": "OBVPM_BUNDLE",
           "links": []
@@ -2910,8 +3476,8 @@
       "id": 1335,
       "type": "ValuePresets (obvpm)",
       "pos": [
-        6720,
-        70
+        5868.300346064862,
+        80.69084633094954
       ],
       "size": [
         310,
@@ -2940,9 +3506,20 @@
           "vanilla 8 steps first pass"
         ]
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "preset",
+          "name": "preset",
+          "type": "STRING",
+          "widget": {
+            "name": "preset"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "bundle",
           "name": "bundle",
           "type": "OBVPM_BUNDLE",
           "links": []
@@ -2950,68 +3527,17 @@
       ]
     },
     {
-      "id": 1520,
-      "type": "CompatibilityCheck (obvpm)",
-      "pos": [
-        8975.728210449204,
-        -163.95832061767135
-      ],
-      "size": [
-        350,
-        360
-      ],
-      "order": 24,
-      "mode": 0,
-      "title": "Compatibility Check (obvpm) [skip]",
-      "widgets_values": [
-        "comfyui >= 0.35.0\ncomfyui-obvpm >= 0.2.16   https://github.com/chanon/comfyui-obvpm   # Better behavior when models are missing\ncomfyui-obvpm-timeline >= 0.1.4   https://github.com/chanon/comfyui-obvpm-timeline   # Result preview improvements\ncomfyui-kjnodes >= 1.5.0   https://github.com/kijai/ComfyUI-KJNodes   # Set / Get nodes\nrgthree-comfy >= 1.0.0   https://github.com/rgthree/rgthree-comfy   # Power Lora Loader\ncomfyui-minimax-h3-turbo >= 1.2.2   https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo   # the turbo LoRA loader's low_vram switch\ncomfyui-spectrum-minimax-h3 >= 0.2.9   https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3   # the Spectrum node's current inputs\nnode MinimaxH3LatentUpscaler3D has enable_temporal_chunking   https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler   # the original pack, not the Plus fork\nnot pack https://github.com/kat3ri/ComfyUI-MiniMax-H3-Extend   # it replaces MiniMax H3's conditioning and drops the masks the timeline's extends need (colour shift)"
-      ],
-      "flags": {},
-      "properties": {
-        "Node name for S&R": "CompatibilityCheck (obvpm)",
-        "compatible_links": [
-          {
-            "text": "Support me on Patreon",
-            "url": "https://www.patreon.com/cw/obvpm"
-          },
-          {
-            "text": "Watch the 007 YouTube Tutorial",
-            "url": "https://www.youtube.com/watch?v=k5GF5cu72ps"
-          },
-          {
-            "text": "Watch the 006 YouTube Tutorial",
-            "url": "https://youtu.be/kqP09NfJXaQ"
-          },
-          {
-            "text": "YouTube Channel",
-            "url": "https://www.youtube.com/@chanondevs"
-          },
-          {
-            "text": "comfyui-obvpm-timeline",
-            "url": "https://github.com/chanon/comfyui-obvpm-timeline"
-          },
-          {
-            "text": "comfyui-obvpm",
-            "url": "https://github.com/chanon/comfyui-obvpm"
-          }
-        ],
-        "compatible_message": "Original OBVPM workflow by ChanonDevs. The links below support the original creator."
-      },
-      "inputs": [],
-      "outputs": []
-    },
-    {
       "id": 1526,
-      "type": "b296940d-2d4e-516b-87af-92017e6b5b4e",
+      "type": "49a6e698-ffa6-5dc6-b0d0-59da73d3befb",
       "pos": [
-        3357.912841538479,
-        1335.784915300509
+        2695.0838142950574,
+        1271.6401505216716
       ],
       "size": [
         410,
         90
       ],
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "widgets_values": [
         "minimax_h3_video_vae_fp16.safetensors",
@@ -3056,14 +3582,14 @@
       "id": 1527,
       "type": "SetNode",
       "pos": [
-        3797.912841538473,
-        1365.7849153005093
+        3135.0838142950515,
+        1301.6401505216718
       ],
       "size": [
         250,
         60
       ],
-      "order": 46,
+      "order": 50,
       "mode": 0,
       "title": "Set_h3_upscale_vaes",
       "widgets_values": [
@@ -3093,14 +3619,14 @@
       "id": 1529,
       "type": "GetNode",
       "pos": [
-        3720,
-        80
+        3107.0607537493856,
+        72.8728213138435
       ],
       "size": [
         230,
         60
       ],
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "title": "Get_h3_gen_engine_settings",
       "widgets_values": [
@@ -3125,14 +3651,14 @@
       "id": 1530,
       "type": "GetNode",
       "pos": [
-        3720,
-        125
+        3107.0607537493856,
+        117.8728213138435
       ],
       "size": [
         260,
         60
       ],
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "title": "Get_h3_upscale_engine_settings",
       "widgets_values": [
@@ -3157,14 +3683,14 @@
       "id": 1531,
       "type": "OverrideBundleValues (obvpm)",
       "pos": [
-        4330,
-        70
+        3717.0607537493893,
+        62.872821313843495
       ],
       "size": [
         460,
         148
       ],
-      "order": 55,
+      "order": 61,
       "mode": 0,
       "title": "H3 Model",
       "widgets_values": [
@@ -3266,6 +3792,7 @@
       },
       "inputs": [
         {
+          "localized_name": "bundle",
           "name": "bundle",
           "type": "OBVPM_BUNDLE",
           "link": 2820
@@ -3273,6 +3800,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "bundle",
           "name": "bundle",
           "type": "OBVPM_BUNDLE",
           "links": [
@@ -3286,14 +3814,14 @@
       "id": 1533,
       "type": "Unbundle (obvpm)",
       "pos": [
-        4830,
-        80
+        4217.06075374939,
+        72.8728213138435
       ],
       "size": [
         158.0595703125,
         266
       ],
-      "order": 59,
+      "order": 67,
       "mode": 0,
       "widgets_values": [
         "",
@@ -3306,6 +3834,7 @@
       "inputs": [
         {
           "label": " ",
+          "localized_name": " ",
           "name": "in",
           "shape": 7,
           "type": "OBVPM_BUNDLE",
@@ -3315,6 +3844,7 @@
       "outputs": [
         {
           "label": "model",
+          "localized_name": "model",
           "name": "out_1",
           "type": "*",
           "links": [
@@ -3323,66 +3853,77 @@
         },
         {
           "label": "attention",
+          "localized_name": "attention",
           "name": "out_2",
           "type": "*",
           "links": null
         },
         {
           "label": "sparse_attention",
+          "localized_name": "sparse_attention",
           "name": "out_3",
           "type": "*",
           "links": null
         },
         {
           "label": "spectrum",
+          "localized_name": "spectrum",
           "name": "out_4",
           "type": "*",
           "links": null
         },
         {
           "label": "turbo_loader",
+          "localized_name": "turbo_loader",
           "name": "out_5",
           "type": "*",
           "links": null
         },
         {
           "label": "turbo_lora",
+          "localized_name": "turbo_lora",
           "name": "out_6",
           "type": "*",
           "links": null
         },
         {
           "label": "turbo_strength",
+          "localized_name": "turbo_strength",
           "name": "out_7",
           "type": "*",
           "links": null
         },
         {
           "label": "steps",
+          "localized_name": "steps",
           "name": "out_8",
           "type": "*",
           "links": null
         },
         {
           "label": "sampler",
+          "localized_name": "sampler",
           "name": "out_9",
           "type": "*",
           "links": null
         },
         {
           "label": "scheduler",
+          "localized_name": "scheduler",
           "name": "out_10",
           "type": "*",
           "links": null
         },
         {
           "label": "shift_video",
+          "localized_name": "shift_video",
           "name": "out_11",
           "type": "*",
           "links": null
         },
         {
           "label": "shift_audio",
+          "localized_name": "shift_audio",
           "name": "out_12",
           "type": "*",
           "links": null
@@ -3393,14 +3934,14 @@
       "id": 1535,
       "type": "SetNode",
       "pos": [
-        5830,
-        80
+        5217.06075374939,
+        72.8728213138435
       ],
       "size": [
         210,
         60
       ],
-      "order": 73,
+      "order": 81,
       "mode": 0,
       "title": "Set_unoptimized_model",
       "widgets_values": [
@@ -3430,14 +3971,14 @@
       "id": 1536,
       "type": "GetNode",
       "pos": [
-        4520,
-        350
+        3907.0607537493893,
+        342.8728213138434
       ],
       "size": [
         210,
         60
       ],
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "title": "Get_unoptimized_model",
       "widgets_values": [
@@ -3462,8 +4003,61 @@
       "id": 1629,
       "type": "Unbundle (obvpm)",
       "pos": [
-        -142.84564995458524,
-        1449.5234144609587
+        -1114.7359822500844,
+        1484.8649258001062
+      ],
+      "size": [
+        199,
+        110
+      ],
+      "order": 28,
+      "mode": 0,
+      "title": "Get h3_timeline_outputs",
+      "widgets_values": [
+        "",
+        "h3_timeline_outputs"
+      ],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "Unbundle (obvpm)",
+        "obvpm_constant": true,
+        "obvpm_title": "Unbundle (obvpm)"
+      },
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "length",
+          "localized_name": "length",
+          "name": "out_1",
+          "type": "*",
+          "links": [
+            3049
+          ]
+        },
+        {
+          "label": "sequence",
+          "localized_name": "sequence",
+          "name": "out_2",
+          "type": "*",
+          "links": null
+        },
+        {
+          "label": "upscaling",
+          "localized_name": "upscaling",
+          "name": "out_3",
+          "type": "*",
+          "links": [
+            3050
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1630,
+      "type": "Unbundle (obvpm)",
+      "pos": [
+        2695.0838142950574,
+        871.6401505216704
       ],
       "size": [
         199,
@@ -3486,62 +4080,14 @@
       "outputs": [
         {
           "label": "length",
-          "name": "out_1",
-          "type": "*",
-          "links": [
-            3049
-          ]
-        },
-        {
-          "label": "sequence",
-          "name": "out_2",
-          "type": "*",
-          "links": null
-        },
-        {
-          "label": "upscaling",
-          "name": "out_3",
-          "type": "*",
-          "links": [
-            3050
-          ]
-        }
-      ]
-    },
-    {
-      "id": 1630,
-      "type": "Unbundle (obvpm)",
-      "pos": [
-        3357.912841538479,
-        935.7849153005087
-      ],
-      "size": [
-        199,
-        110
-      ],
-      "order": 30,
-      "mode": 0,
-      "title": "Get h3_timeline_outputs",
-      "widgets_values": [
-        "",
-        "h3_timeline_outputs"
-      ],
-      "flags": {},
-      "properties": {
-        "Node name for S&R": "Unbundle (obvpm)",
-        "obvpm_constant": true,
-        "obvpm_title": "Unbundle (obvpm)"
-      },
-      "inputs": [],
-      "outputs": [
-        {
-          "label": "length",
+          "localized_name": "length",
           "name": "out_1",
           "type": "*",
           "links": null
         },
         {
           "label": "sequence",
+          "localized_name": "sequence",
           "name": "out_2",
           "type": "*",
           "links": [
@@ -3550,6 +4096,7 @@
         },
         {
           "label": "upscaling",
+          "localized_name": "upscaling",
           "name": "out_3",
           "type": "*",
           "links": [
@@ -3562,14 +4109,14 @@
       "id": 1523,
       "type": "MiniMaxH3RefModsLoader",
       "pos": [
-        -90.36614157936705,
-        63.686884099787
+        -61.17230481701351,
+        72.6469371905207
       ],
       "size": [
-        400,
+        410.31434117652657,
         510
       ],
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "title": "RefMods — pick your characters",
       "widgets_values": [
@@ -3643,9 +4190,486 @@
           2
         ]
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "show_info",
+          "name": "show_info",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "show_info"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_1",
+          "name": "mod_1",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_1",
+          "name": "strength_1",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_1",
+          "name": "copies_1",
+          "type": "INT",
+          "widget": {
+            "name": "copies_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_2",
+          "name": "mod_2",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_2",
+          "name": "strength_2",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_2",
+          "name": "copies_2",
+          "type": "INT",
+          "widget": {
+            "name": "copies_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_3",
+          "name": "mod_3",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_3",
+          "name": "strength_3",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_3",
+          "name": "copies_3",
+          "type": "INT",
+          "widget": {
+            "name": "copies_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_4",
+          "name": "mod_4",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_4",
+          "name": "strength_4",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_4",
+          "name": "copies_4",
+          "type": "INT",
+          "widget": {
+            "name": "copies_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_5",
+          "name": "mod_5",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_5",
+          "name": "strength_5",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_5",
+          "name": "copies_5",
+          "type": "INT",
+          "widget": {
+            "name": "copies_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_6",
+          "name": "mod_6",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_6",
+          "name": "strength_6",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_6",
+          "name": "copies_6",
+          "type": "INT",
+          "widget": {
+            "name": "copies_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_7",
+          "name": "mod_7",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_7",
+          "name": "strength_7",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_7",
+          "name": "copies_7",
+          "type": "INT",
+          "widget": {
+            "name": "copies_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mod_8",
+          "name": "mod_8",
+          "type": "COMBO",
+          "widget": {
+            "name": "mod_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_8",
+          "name": "strength_8",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "copies_8",
+          "name": "copies_8",
+          "type": "INT",
+          "widget": {
+            "name": "copies_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_total_tokens",
+          "name": "max_total_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_total_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_1",
+          "name": "components_1",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_1",
+          "name": "visual_strength_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_1",
+          "name": "audio_strength_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_2",
+          "name": "components_2",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_2",
+          "name": "visual_strength_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_2",
+          "name": "audio_strength_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_3",
+          "name": "components_3",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_3",
+          "name": "visual_strength_3",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_3",
+          "name": "audio_strength_3",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_4",
+          "name": "components_4",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_4",
+          "name": "visual_strength_4",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_4",
+          "name": "audio_strength_4",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_5",
+          "name": "components_5",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_5",
+          "name": "visual_strength_5",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_5",
+          "name": "audio_strength_5",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_6",
+          "name": "components_6",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_6",
+          "name": "visual_strength_6",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_6",
+          "name": "audio_strength_6",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_7",
+          "name": "components_7",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_7",
+          "name": "visual_strength_7",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_7",
+          "name": "audio_strength_7",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "components_8",
+          "name": "components_8",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "components_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "visual_strength_8",
+          "name": "visual_strength_8",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "visual_strength_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_strength_8",
+          "name": "audio_strength_8",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_strength_8"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "mods",
           "name": "mods",
           "type": "H3_REF_MODS",
           "links": [
@@ -3653,6 +4677,7 @@
           ]
         },
         {
+          "localized_name": "prompt_hint",
           "name": "prompt_hint",
           "type": "STRING",
           "links": null
@@ -3663,14 +4688,14 @@
       "id": 1524,
       "type": "MiniMaxH3RefModApply",
       "pos": [
-        397.15435004541627,
-        1499.5234144609592
+        -574.7359822500832,
+        1534.8649258001067
       ],
       "size": [
         330,
         430
       ],
-      "order": 62,
+      "order": 70,
       "mode": 0,
       "title": "RefMod Apply (engine)",
       "widgets_values": [
@@ -3693,18 +4718,125 @@
       },
       "inputs": [
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "MINIMAX_H3_COND,CONDITIONING",
           "link": 3040
         },
         {
+          "localized_name": "mods",
           "name": "mods",
           "type": "H3_REF_MODS",
           "link": 3039
+        },
+        {
+          "localized_name": "override",
+          "name": "override",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "override"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "retention",
+          "name": "retention",
+          "type": "FLOAT",
+          "widget": {
+            "name": "retention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "curve_direction",
+          "name": "curve_direction",
+          "type": "COMBO",
+          "widget": {
+            "name": "curve_direction"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scramble_seed",
+          "name": "scramble_seed",
+          "type": "INT",
+          "widget": {
+            "name": "scramble_seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "curve_shape",
+          "name": "curve_shape",
+          "type": "COMBO",
+          "widget": {
+            "name": "curve_shape"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "curve_value",
+          "name": "curve_value",
+          "type": "FLOAT",
+          "widget": {
+            "name": "curve_value"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "graph_preset",
+          "name": "graph_preset",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "graph_preset"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scramble_mode",
+          "name": "scramble_mode",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "scramble_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scramble_keep",
+          "name": "scramble_keep",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "scramble_keep"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_total_tokens",
+          "name": "max_total_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_total_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_preset_as",
+          "name": "save_preset_as",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "save_preset_as"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "conditioning",
           "name": "conditioning",
           "type": "CONDITIONING",
           "links": [
@@ -3712,6 +4844,7 @@
           ]
         },
         {
+          "localized_name": "curve graph",
           "name": "curve graph",
           "type": "IMAGE",
           "links": null
@@ -3729,7 +4862,7 @@
         217.1484375,
         60
       ],
-      "order": 50,
+      "order": 54,
       "mode": 0,
       "title": "Set_h3_refmods",
       "widgets_values": [
@@ -3759,14 +4892,14 @@
       "id": 1632,
       "type": "GetNode",
       "pos": [
-        147.15435004541516,
-        1819.5234144609597
+        -824.7359822500845,
+        1854.8649258001071
       ],
       "size": [
         210,
         60
       ],
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "title": "Get_h3_refmods",
       "widgets_values": [
@@ -3791,14 +4924,14 @@
       "id": 1634,
       "type": "SetNode",
       "pos": [
-        3527.9128415384766,
-        1485.7849153005056
+        2865.083814295055,
+        1421.6401505216681
       ],
       "size": [
         260.05078125,
         60
       ],
-      "order": 66,
+      "order": 74,
       "mode": 0,
       "title": "Set_h3_joint_layout",
       "widgets_values": [
@@ -3828,14 +4961,14 @@
       "id": 1635,
       "type": "GetNode",
       "pos": [
-        5727.9128415384685,
-        1235.784915300509
+        5065.08381429505,
+        1171.6401505216716
       ],
       "size": [
         210,
         60
       ],
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "title": "Get_h3_joint_layout",
       "widgets_values": [
@@ -3860,14 +4993,14 @@
       "id": 1636,
       "type": "GetNode",
       "pos": [
-        4557.912841538468,
-        975.7849153005079
+        3895.083814295053,
+        911.6401505216696
       ],
       "size": [
         210,
         60
       ],
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "title": "Get_h3_joint_layout",
       "widgets_values": [
@@ -3892,14 +5025,14 @@
       "id": 1637,
       "type": "SetNode",
       "pos": [
-        3737.9128415384735,
-        1195.7849153005088
+        3075.083814295052,
+        1131.6401505216713
       ],
       "size": [
         210,
         60
       ],
-      "order": 71,
+      "order": 79,
       "mode": 0,
       "title": "Set_h3_source_audio",
       "widgets_values": [
@@ -3929,14 +5062,14 @@
       "id": 1638,
       "type": "GetNode",
       "pos": [
-        5727.9128415384685,
-        1280.7849153005093
+        5065.08381429505,
+        1216.6401505216718
       ],
       "size": [
         210,
         60
       ],
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "title": "Get_h3_source_audio",
       "widgets_values": [
@@ -3961,14 +5094,14 @@
       "id": 1639,
       "type": "SetNode",
       "pos": [
-        4817.912841538467,
-        905.784915300509
+        4155.083814295048,
+        841.6401505216708
       ],
       "size": [
         223.53515625,
         60
       ],
-      "order": 57,
+      "order": 63,
       "mode": 0,
       "title": "Set_h3_joint_conditioning",
       "widgets_values": [
@@ -3998,14 +5131,14 @@
       "id": 1640,
       "type": "GetNode",
       "pos": [
-        5707.9128415384685,
-        1190.7849153005088
+        5045.08381429505,
+        1126.6401505216713
       ],
       "size": [
         210.525,
         60
       ],
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "title": "Get_h3_joint_conditioning",
       "widgets_values": [
@@ -4030,14 +5163,14 @@
       "id": 1641,
       "type": "MuteGate (obvpm)",
       "pos": [
-        -202.84564995458496,
-        1669.5234144609592
+        -1174.735982250084,
+        1704.8649258001067
       ],
       "size": [
         270,
         80
       ],
-      "order": 48,
+      "order": 52,
       "mode": 0,
       "title": "Run when Generating",
       "widgets_values": [
@@ -4051,12 +5184,14 @@
       },
       "inputs": [
         {
+          "localized_name": "input",
           "name": "input",
           "shape": 7,
           "type": "*",
           "link": 3049
         },
         {
+          "localized_name": "mute",
           "name": "mute",
           "type": "BOOLEAN",
           "widget": {
@@ -4067,6 +5202,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "value",
           "name": "value",
           "type": "*",
           "links": [
@@ -4079,14 +5215,14 @@
       "id": 1642,
       "type": "ComfyNotNode",
       "pos": [
-        3357.912841538479,
-        1005.7849153005069
+        2695.0838142950574,
+        941.6401505216686
       ],
       "size": [
         140,
         30
       ],
-      "order": 49,
+      "order": 53,
       "mode": 0,
       "title": "Not upscaling",
       "flags": {},
@@ -4095,6 +5231,7 @@
       },
       "inputs": [
         {
+          "localized_name": "value",
           "name": "value",
           "type": "*",
           "link": 3052
@@ -4102,6 +5239,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "BOOLEAN",
           "name": "BOOLEAN",
           "type": "BOOLEAN",
           "links": [
@@ -4114,14 +5252,14 @@
       "id": 1643,
       "type": "MuteGate (obvpm)",
       "pos": [
-        3557.9128415384757,
-        865.7849153005089
+        2895.0838142950543,
+        801.6401505216706
       ],
       "size": [
         210,
         60
       ],
-      "order": 56,
+      "order": 62,
       "mode": 0,
       "title": "Run when Upscaling",
       "widgets_values": [
@@ -4135,12 +5273,14 @@
       },
       "inputs": [
         {
+          "localized_name": "input",
           "name": "input",
           "shape": 7,
           "type": "*",
           "link": 3054
         },
         {
+          "localized_name": "mute",
           "name": "mute",
           "type": "BOOLEAN",
           "widget": {
@@ -4151,10 +5291,460 @@
       ],
       "outputs": [
         {
+          "localized_name": "value",
           "name": "value",
           "type": "*",
           "links": [
             3055
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1648,
+      "type": "MarkdownNote",
+      "pos": [
+        -2090,
+        64
+      ],
+      "size": [
+        420,
+        330
+      ],
+      "order": 36,
+      "mode": 0,
+      "title": "Make a new character",
+      "widgets_values": [
+        "## Make a new character\n\n1. Add two photos: one full body, one close-up.\n2. Type a **name** in **Character maker**.\n3. Turn on **Save new characters**.\n4. Click **Character result**, then press ▶ in the bar above it.\n5. Turn **Save new characters** off again.\n6. In **1 · Characters**, click **Refresh RefMods** and pick your name.\n\n**Voice (experimental):** add a clean voice clip (one speaker, no music, 10–30 s), name it in **Voice maker**, then do steps 3–6 with **Voice result**. Pick the voice in a second slot (**+ Add RefMod**)."
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "MarkdownNote"
+      },
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "id": 1650,
+      "type": "LoadImage",
+      "pos": [
+        -1630,
+        64
+      ],
+      "size": [
+        400,
+        400
+      ],
+      "order": 37,
+      "mode": 0,
+      "title": "Photo 1 · full body",
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3068
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 1651,
+      "type": "LoadImage",
+      "pos": [
+        -1630,
+        504
+      ],
+      "size": [
+        400,
+        400
+      ],
+      "order": 38,
+      "mode": 0,
+      "title": "Photo 2 · close-up",
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3069
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 1654,
+      "type": "LoadAudio",
+      "pos": [
+        -730,
+        64
+      ],
+      "size": [
+        420,
+        136
+      ],
+      "order": 39,
+      "mode": 0,
+      "title": "Voice clip",
+      "widgets_values": [
+        "",
+        ""
+      ],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            3073
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1657,
+      "type": "PreviewAny",
+      "pos": [
+        -733.2340283876497,
+        392.45407587976314
+      ],
+      "size": [
+        420,
+        300
+      ],
+      "order": 65,
+      "mode": 0,
+      "title": "Voice result",
+      "widgets_values": [],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 3076
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 1658,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1190,
+        64
+      ],
+      "size": [
+        420,
+        58
+      ],
+      "order": 40,
+      "mode": 0,
+      "title": "Save new characters",
+      "widgets_values": [
+        false
+      ],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "inputs": [
+        {
+          "label": "turn on to save",
+          "localized_name": "value",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "BOOLEAN",
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            3067,
+            3075
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1659,
+      "type": "PreviewAny",
+      "pos": [
+        -1190,
+        330
+      ],
+      "size": [
+        420,
+        300
+      ],
+      "order": 64,
+      "mode": 0,
+      "title": "Character result",
+      "widgets_values": [],
+      "flags": {},
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 3070
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ]
+    },
+    {
+      "id": 1661,
+      "type": "3abbc37d-1ebc-54b2-945a-2607a5385eaf",
+      "pos": [
+        -1190,
+        162
+      ],
+      "size": [
+        420,
+        102
+      ],
+      "order": 56,
+      "mode": 0,
+      "widgets_values": [
+        "my_character_v1",
+        false
+      ],
+      "flags": {},
+      "properties": {
+        "previewExposures": []
+      },
+      "inputs": [
+        {
+          "localized_name": "name",
+          "name": "name",
+          "type": "STRING",
+          "widget": {
+            "name": "name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save",
+          "name": "save",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save"
+          },
+          "link": 3067
+        },
+        {
+          "label": "photo 1",
+          "name": "refs_image.ref_image_1",
+          "type": "IMAGE",
+          "link": 3068
+        },
+        {
+          "label": "photo 2",
+          "localized_name": "ref_image_2",
+          "name": "refs_image.ref_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3069
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "details",
+          "name": "details",
+          "type": "STRING",
+          "links": [
+            3070
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1663,
+      "type": "69dc710f-bc82-5620-8bed-bf5bab56ddc6",
+      "pos": [
+        -730,
+        250
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "order": 57,
+      "mode": 0,
+      "title": "Voice maker (experimental)",
+      "widgets_values": [
+        "my_voice_v1",
+        false
+      ],
+      "flags": {},
+      "properties": {
+        "previewExposures": []
+      },
+      "inputs": [
+        {
+          "label": "voice clip",
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3073
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "type": "STRING",
+          "widget": {
+            "name": "name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save",
+          "name": "save",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save"
+          },
+          "link": 3075
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "details",
+          "name": "details",
+          "type": "STRING",
+          "links": [
+            3076
           ]
         }
       ]
@@ -4874,6 +6464,62 @@
       "INT"
     ],
     [
+      3067,
+      1658,
+      0,
+      1661,
+      1,
+      "BOOLEAN"
+    ],
+    [
+      3068,
+      1650,
+      0,
+      1661,
+      2,
+      "IMAGE"
+    ],
+    [
+      3069,
+      1651,
+      0,
+      1661,
+      3,
+      "IMAGE"
+    ],
+    [
+      3070,
+      1661,
+      0,
+      1659,
+      0,
+      "STRING"
+    ],
+    [
+      3073,
+      1654,
+      0,
+      1663,
+      0,
+      "AUDIO"
+    ],
+    [
+      3075,
+      1658,
+      0,
+      1663,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      3076,
+      1663,
+      0,
+      1657,
+      0,
+      "STRING"
+    ],
+    [
       2488,
       1350,
       0,
@@ -4886,7 +6532,7 @@
       1502,
       0,
       1351,
-      1,
+      3,
       "FLOAT"
     ]
   ],
@@ -4907,8 +6553,8 @@
       "id": 2,
       "title": "2 · Prompt & Seed [restore]",
       "bounding": [
-        737.3863636363641,
-        -25.2525329589842,
+        584.2401164901431,
+        -22.307417799415404,
         643.3332824707024,
         905.0695037841822
       ],
@@ -4919,7 +6565,7 @@
       "id": 3,
       "title": "3 · Timeline — Run, review, extend [restore]",
       "bounding": [
-        1660,
+        1238.847561499248,
         0,
         1300,
         2130
@@ -4931,8 +6577,8 @@
       "id": 4,
       "title": "4 · Model & speed settings — set once [restore]",
       "bounding": [
-        3280,
-        0,
+        2667.0607537493856,
+        -7.127178686156494,
         3116.1752569580076,
         674.1823255157492
       ],
@@ -4943,8 +6589,8 @@
       "id": 5,
       "title": "5 · Upscale the finished film",
       "bounding": [
-        6680,
-        0,
+        5828.300346064862,
+        10.690846330949562,
         1800,
         1750
       ],
@@ -4955,8 +6601,8 @@
       "id": 6,
       "title": "⚙ Generate engine — runs when upscale is off",
       "bounding": [
-        -522.8456499545846,
-        939.523414460958,
+        -1494.735982250083,
+        974.8649258001054,
         2171.5456071805083,
         1014.6395296117618
       ],
@@ -4967,12 +6613,24 @@
       "id": 7,
       "title": "⚙ Upscale engine — runs when upscale is on",
       "bounding": [
-        3327.912841538478,
-        775.7849153005087,
+        2665.0838142950565,
+        711.6401505216704,
         3010,
         730
       ],
       "color": "#2b2b2b",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "0 · New character — make a RefMod",
+      "bounding": [
+        -2120,
+        -6.313115900213022,
+        1920,
+        940
+      ],
+      "color": "#444",
       "flags": {}
     }
   ],
@@ -4980,12 +6638,12 @@
   "definitions": {
     "subgraphs": [
       {
-        "id": "322ee1bc-d1cc-5ad8-ac37-2fca60cb67ba",
+        "id": "7924d492-84a0-57be-8a3d-4fe3039bf0ce",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 VAE Decode",
@@ -5148,7 +6806,7 @@
         "groups": [],
         "inputs": [
           {
-            "id": "dcc87f14-5189-5297-9ed6-45841242b396",
+            "id": "84299561-3dcb-5e98-a189-12287c63d6a3",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -5161,7 +6819,7 @@
             ]
           },
           {
-            "id": "39c94e49-1861-515d-951e-3037adc89dd4",
+            "id": "2f0140e1-26b5-5e84-ba6f-249dd77cc619",
             "name": "vae_1",
             "type": "VAE",
             "linkIds": [
@@ -5174,7 +6832,7 @@
             ]
           },
           {
-            "id": "b8f507ce-485a-53e3-96ed-400ee4c4dbdc",
+            "id": "08d17b2d-3cc8-5e90-946c-1d1821bcc966",
             "name": "anything",
             "type": "*",
             "linkIds": [
@@ -5190,7 +6848,7 @@
         ],
         "outputs": [
           {
-            "id": "579ea1dc-b341-55a3-b51d-bf31f824455c",
+            "id": "fadc6d70-442b-587b-8f56-86137485fac2",
             "name": "IMAGE",
             "type": "IMAGE",
             "linkIds": [
@@ -5203,7 +6861,7 @@
             ]
           },
           {
-            "id": "a442896b-222f-5b9d-aae1-c6561f55145f",
+            "id": "0150aed7-c661-5ffe-965d-2d9c3d6de60f",
             "name": "AUDIO",
             "type": "AUDIO",
             "linkIds": [
@@ -5218,12 +6876,12 @@
         ]
       },
       {
-        "id": "08f784cf-364c-56a7-9bfe-4b937c77fa0b",
+        "id": "d07e12ad-b633-5b91-9bea-575f250d9bbd",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Load CLIP and VAE for Generation",
@@ -5337,6 +6995,25 @@
                   "name": "clip_name"
                 },
                 "link": 2250
+              },
+              {
+                "localized_name": "type",
+                "name": "type",
+                "type": "COMBO",
+                "widget": {
+                  "name": "type"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "device",
+                "name": "device",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "device"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -5512,7 +7189,7 @@
         "groups": [],
         "inputs": [
           {
-            "id": "56a57bc2-438b-514f-be76-a8ff7ec9df81",
+            "id": "1a1d2624-ba87-50fc-b607-a367c96f66b3",
             "name": "clip_name",
             "type": "COMBO",
             "linkIds": [
@@ -5525,7 +7202,7 @@
             ]
           },
           {
-            "id": "fb04ec14-ce3c-5fdd-a1b4-cad181ab2242",
+            "id": "d8e23dc7-883b-5f38-90d2-177d9864af5f",
             "name": "vae_name",
             "type": "COMBO",
             "linkIds": [
@@ -5538,7 +7215,7 @@
             ]
           },
           {
-            "id": "446dd7ac-9032-5349-860d-11405203252d",
+            "id": "04c2584d-6b3b-58fa-8f19-041fd132c3be",
             "name": "vae_name_1",
             "type": "COMBO",
             "linkIds": [
@@ -5553,7 +7230,7 @@
         ],
         "outputs": [
           {
-            "id": "2ffd3738-67df-532f-8cb2-88b3e9895e68",
+            "id": "6b00a8dd-1ff3-5613-90d9-e3625daa46c0",
             "name": "out",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -5568,12 +7245,12 @@
         ]
       },
       {
-        "id": "43573b79-e442-5a6c-8be8-d534ad9757a8",
+        "id": "6b28046f-564b-5cb9-bcef-c3d0ccedb0ee",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 REF2VA Input",
@@ -5754,6 +7431,25 @@
                   "name": "megapixels"
                 },
                 "link": 2055
+              },
+              {
+                "localized_name": "multiple",
+                "name": "multiple",
+                "type": "INT",
+                "widget": {
+                  "name": "multiple"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "preview",
+                "name": "preview",
+                "shape": 7,
+                "type": "RESOLUTION_PREVIEW",
+                "widget": {
+                  "name": "preview"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -5894,7 +7590,7 @@
         "groups": [],
         "inputs": [
           {
-            "id": "06ef9ca8-4394-5030-af1f-33582104b4be",
+            "id": "87fe1a3d-ebe7-58d8-b3fd-2d8af191d3b3",
             "name": "value",
             "type": "STRING",
             "linkIds": [
@@ -5907,7 +7603,7 @@
             ]
           },
           {
-            "id": "caf0d277-6207-530a-9787-62acf9f472fd",
+            "id": "ef3ed6b0-49e0-5f3e-979f-a1faf2c197fb",
             "name": "aspect_ratio_1",
             "type": "COMBO",
             "linkIds": [
@@ -5920,7 +7616,7 @@
             ]
           },
           {
-            "id": "81af3e5c-d547-5a11-95d9-2960215da950",
+            "id": "155442a5-32f8-58db-b4b6-1213a46bbe9e",
             "name": "value_2",
             "type": "FLOAT",
             "linkIds": [
@@ -5933,7 +7629,7 @@
             ]
           },
           {
-            "id": "3a4ccb5b-f0ef-5a10-bf0d-617bfdfaae41",
+            "id": "96c59610-a52d-5096-a1e5-5fe74f9b69e1",
             "name": "value_3",
             "type": "STRING",
             "linkIds": [
@@ -5948,7 +7644,7 @@
         ],
         "outputs": [
           {
-            "id": "71793f4c-8ec9-5304-9882-b02a06cc2586",
+            "id": "61949fc8-ce14-5948-824a-e76d4a89817f",
             "name": "out",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -5961,7 +7657,7 @@
             ]
           },
           {
-            "id": "40df42b3-72bc-5031-9fc3-9004b0f2d541",
+            "id": "eafa5ac1-9722-522a-9b93-25ed610dc3af",
             "name": "STRING",
             "type": "STRING",
             "linkIds": [
@@ -5976,12 +7672,12 @@
         ]
       },
       {
-        "id": "2d5c61ff-9a0e-553f-853d-b589ff47e924",
+        "id": "6671dd33-52e9-5b69-9378-71a3eaba378f",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Joint Refine Sampling",
@@ -6508,7 +8204,7 @@
         ],
         "inputs": [
           {
-            "id": "a6c443c0-14a8-52cc-9b33-8bab62dd9c66",
+            "id": "ab37e351-0f1d-54b5-b43a-e5ddd0c04b1a",
             "name": "noise_seed",
             "type": "INT",
             "linkIds": [
@@ -6521,7 +8217,7 @@
             ]
           },
           {
-            "id": "a342608c-92ed-5db2-8375-9c54926adc17",
+            "id": "229d4d6d-890a-5a89-9044-d098d58b0ed5",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -6535,7 +8231,7 @@
             ]
           },
           {
-            "id": "80307666-903d-5dc2-84de-6d7a1f913bb5",
+            "id": "f256a313-9563-57d5-8072-1225986984c3",
             "name": "conditioning",
             "type": "CONDITIONING",
             "linkIds": [
@@ -6548,7 +8244,7 @@
             ]
           },
           {
-            "id": "3a402ec6-0dc7-50a4-bed6-872b204ca23a",
+            "id": "31cdc3ee-2cfb-5123-bf37-038ba6a4091e",
             "name": "latent_image",
             "type": "LATENT",
             "linkIds": [
@@ -6562,7 +8258,7 @@
             ]
           },
           {
-            "id": "595dc245-18b2-524d-889e-fe2f7f741d83",
+            "id": "c2f2bc8f-aca6-5c40-aa39-ccdd0106a6bc",
             "name": "in",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -6575,7 +8271,7 @@
             ]
           },
           {
-            "id": "d44cf38d-0c9f-5aae-a360-efedde8fcf6c",
+            "id": "d4ec2036-eff9-559b-8654-7a6bf42bd166",
             "name": "denoise",
             "type": "FLOAT",
             "linkIds": [
@@ -6589,7 +8285,7 @@
         ],
         "outputs": [
           {
-            "id": "7f27b3e5-194e-506f-a32d-e40f02cf7131",
+            "id": "1b1aa8de-4cec-5612-8d86-b0bae357dd43",
             "name": "output",
             "type": "LATENT",
             "linkIds": [
@@ -6605,12 +8301,12 @@
         ]
       },
       {
-        "id": "2efbffcb-30ba-5b5c-914b-c03b488e8b78",
+        "id": "7e03d7f9-cd33-5869-8d5e-0e574b2136ac",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Model Optimization",
@@ -6679,7 +8375,7 @@
             "origin_id": 1321,
             "origin_slot": 0,
             "target_id": 1331,
-            "target_slot": 4,
+            "target_slot": 5,
             "type": "MODEL"
           },
           {
@@ -6711,7 +8407,7 @@
             "origin_id": 1324,
             "origin_slot": 0,
             "target_id": 1323,
-            "target_slot": 4,
+            "target_slot": 5,
             "type": "MODEL"
           },
           {
@@ -7068,6 +8764,15 @@
                   "name": "strength"
                 },
                 "link": 2185
+              },
+              {
+                "localized_name": "low_vram",
+                "name": "low_vram",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "low_vram"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7136,6 +8841,15 @@
                 "link": 2151
               },
               {
+                "localized_name": "cases",
+                "name": "cases",
+                "type": "STRING",
+                "widget": {
+                  "name": "cases"
+                },
+                "link": null
+              },
+              {
                 "label": "larryvrh",
                 "localized_name": "larryvrh",
                 "name": "on_case_3",
@@ -7181,6 +8895,15 @@
                 "name": "model",
                 "type": "MODEL",
                 "link": 2195
+              },
+              {
+                "localized_name": "backend",
+                "name": "attention",
+                "type": "COMBO",
+                "widget": {
+                  "name": "attention"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7257,6 +8980,15 @@
                 "name": "model",
                 "type": "MODEL",
                 "link": 2194
+              },
+              {
+                "localized_name": "backend",
+                "name": "attention",
+                "type": "COMBO",
+                "widget": {
+                  "name": "attention"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7357,6 +9089,256 @@
                 "name": "model",
                 "type": "MODEL",
                 "link": 2312
+              },
+              {
+                "localized_name": "enabled",
+                "name": "enabled",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "enabled"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "blend_weight",
+                "name": "blend_weight",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "blend_weight"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "degree",
+                "name": "degree",
+                "type": "INT",
+                "widget": {
+                  "name": "degree"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "ridge_lambda",
+                "name": "ridge_lambda",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "ridge_lambda"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "window_size",
+                "name": "window_size",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "window_size"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "flex_window",
+                "name": "flex_window",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "flex_window"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "warmup_steps",
+                "name": "warmup_steps",
+                "type": "INT",
+                "widget": {
+                  "name": "warmup_steps"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "tail_actual_steps",
+                "name": "tail_actual_steps",
+                "type": "INT",
+                "widget": {
+                  "name": "tail_actual_steps"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "max_history",
+                "name": "max_history",
+                "type": "INT",
+                "widget": {
+                  "name": "max_history"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "debug",
+                "name": "debug",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "debug"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "history_storage",
+                "name": "history_storage",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "history_storage"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "bootstrap_first_forecast",
+                "name": "bootstrap_first_forecast",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "bootstrap_first_forecast"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "anchor_residual_feedback",
+                "name": "anchor_residual_feedback",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "anchor_residual_feedback"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "selective_rollback_correction",
+                "name": "selective_rollback_correction",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "selective_rollback_correction"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "offline_smoothing_replay",
+                "name": "offline_smoothing_replay",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "offline_smoothing_replay"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "audio_blend_weight",
+                "name": "audio_blend_weight",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "audio_blend_weight"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "offline_archive_storage",
+                "name": "offline_archive_storage",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "offline_archive_storage"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "model_aware_mode",
+                "name": "model_aware_mode",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "model_aware_mode"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "model_aware_risk_threshold",
+                "name": "model_aware_risk_threshold",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "model_aware_risk_threshold"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "model_aware_trust_shrinkage",
+                "name": "model_aware_trust_shrinkage",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "model_aware_trust_shrinkage"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "model_aware_replay_generic_correction",
+                "name": "model_aware_replay_generic_correction",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "model_aware_replay_generic_correction"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "generic_correction_mode",
+                "name": "generic_correction_mode",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "generic_correction_mode"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "generic_correction_limiter",
+                "name": "generic_correction_limiter",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "generic_correction_limiter"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "generic_correction_limit",
+                "name": "generic_correction_limit",
+                "shape": 7,
+                "type": "FLOAT",
+                "widget": {
+                  "name": "generic_correction_limit"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "generic_correction_attenuation",
+                "name": "generic_correction_attenuation",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "generic_correction_attenuation"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "sa_pece_forecast_policy",
+                "name": "sa_pece_forecast_policy",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "sa_pece_forecast_policy"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7462,6 +9444,15 @@
                 "link": 2198
               },
               {
+                "localized_name": "cases",
+                "name": "cases",
+                "type": "STRING",
+                "widget": {
+                  "name": "cases"
+                },
+                "link": null
+              },
+              {
                 "label": "sage",
                 "localized_name": "sage",
                 "name": "on_case_3",
@@ -7551,6 +9542,87 @@
                 "name": "model",
                 "type": "MODEL",
                 "link": 2777
+              },
+              {
+                "localized_name": "method",
+                "name": "selection",
+                "type": "COMFY_DYNAMICCOMBO_V3",
+                "widget": {
+                  "name": "selection"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "keep_percent",
+                "name": "selection.keep_percent",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "selection.keep_percent"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "start_percent",
+                "name": "start_percent",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "start_percent"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "end_percent",
+                "name": "end_percent",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "end_percent"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "dense_blocks",
+                "name": "dense_blocks",
+                "type": "STRING",
+                "widget": {
+                  "name": "dense_blocks"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "min_tokens",
+                "name": "min_tokens",
+                "type": "INT",
+                "widget": {
+                  "name": "min_tokens"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "extra_tokens",
+                "name": "extra_tokens",
+                "type": "INT",
+                "widget": {
+                  "name": "extra_tokens"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "sink_conditioning",
+                "name": "sink_conditioning",
+                "type": "COMBO",
+                "widget": {
+                  "name": "sink_conditioning"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "verbose",
+                "name": "verbose",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "verbose"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7617,6 +9689,15 @@
                   "name": "selected"
                 },
                 "link": 2828
+              },
+              {
+                "localized_name": "cases",
+                "name": "cases",
+                "type": "STRING",
+                "widget": {
+                  "name": "cases"
+                },
+                "link": null
               }
             ],
             "outputs": [
@@ -7977,7 +10058,7 @@
         ],
         "inputs": [
           {
-            "id": "6d2a40a7-4504-5391-9747-bb8e9f188d61",
+            "id": "78cde9e0-b61d-51bb-b451-e98170f96b63",
             "name": "input",
             "type": "MODEL",
             "linkIds": [
@@ -7990,7 +10071,7 @@
             ]
           },
           {
-            "id": "ba44eb7e-8c8c-5dda-a8a7-d0fcec37eb1e",
+            "id": "b00d718c-98bd-5156-93fa-7b4f5b85ea03",
             "name": "in",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -8005,7 +10086,7 @@
         ],
         "outputs": [
           {
-            "id": "0ec0eda5-602f-50e7-bdf9-d086ad82ba04",
+            "id": "1ad072c0-9995-54bd-a79b-377a78e55812",
             "name": "MODEL",
             "type": "MODEL",
             "linkIds": [
@@ -8020,12 +10101,12 @@
         ]
       },
       {
-        "id": "90a2d8a5-8705-5aef-8e2e-37eec6ae0113",
+        "id": "25acf645-073f-5c23-9ead-658faf6a7821",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Engine Settings Selector",
@@ -8213,7 +10294,7 @@
         "groups": [],
         "inputs": [
           {
-            "id": "8204a1ef-ac9e-5088-b425-94ab9e4c37ae",
+            "id": "78effe2c-cc02-505b-afb2-0799844260d5",
             "name": "on_false",
             "type": "*",
             "linkIds": [
@@ -8228,7 +10309,7 @@
             ]
           },
           {
-            "id": "c856e4be-bf20-5786-83b0-e2ad3c7aa5f4",
+            "id": "37933e41-7a0d-53c5-8f1a-d55b8b150f92",
             "name": "on_true",
             "type": "*",
             "linkIds": [
@@ -8243,7 +10324,7 @@
             ]
           },
           {
-            "id": "5e192cd4-14c4-59ed-b5f9-bc623a5f8690",
+            "id": "c4c9c9b4-86d2-5bf3-bfbd-d8fa2b91353d",
             "name": "in",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -8258,7 +10339,7 @@
         ],
         "outputs": [
           {
-            "id": "b7b17bfc-c4de-5f29-b0a3-d4a229815d7f",
+            "id": "a5346baa-2e35-55aa-b1d4-4f771bd96ab4",
             "name": "value",
             "type": "*",
             "linkIds": [
@@ -8275,12 +10356,12 @@
         ]
       },
       {
-        "id": "5f6ff352-7ffa-55e4-8e4a-17f25a83becf",
+        "id": "f5c08862-2f18-566b-b9b3-c2af2e7ce50d",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Refine Sampling",
@@ -8807,7 +10888,7 @@
         ],
         "inputs": [
           {
-            "id": "a6c443c0-14a8-52cc-9b33-8bab62dd9c66",
+            "id": "ab37e351-0f1d-54b5-b43a-e5ddd0c04b1a",
             "name": "noise_seed",
             "type": "INT",
             "linkIds": [
@@ -8820,7 +10901,7 @@
             ]
           },
           {
-            "id": "a342608c-92ed-5db2-8375-9c54926adc17",
+            "id": "229d4d6d-890a-5a89-9044-d098d58b0ed5",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -8834,7 +10915,7 @@
             ]
           },
           {
-            "id": "80307666-903d-5dc2-84de-6d7a1f913bb5",
+            "id": "f256a313-9563-57d5-8072-1225986984c3",
             "name": "conditioning",
             "type": "CONDITIONING",
             "linkIds": [
@@ -8847,7 +10928,7 @@
             ]
           },
           {
-            "id": "3a402ec6-0dc7-50a4-bed6-872b204ca23a",
+            "id": "31cdc3ee-2cfb-5123-bf37-038ba6a4091e",
             "name": "latent_image",
             "type": "LATENT",
             "linkIds": [
@@ -8861,7 +10942,7 @@
             ]
           },
           {
-            "id": "595dc245-18b2-524d-889e-fe2f7f741d83",
+            "id": "c2f2bc8f-aca6-5c40-aa39-ccdd0106a6bc",
             "name": "in",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -8874,7 +10955,7 @@
             ]
           },
           {
-            "id": "d44cf38d-0c9f-5aae-a360-efedde8fcf6c",
+            "id": "d4ec2036-eff9-559b-8654-7a6bf42bd166",
             "name": "denoise",
             "type": "FLOAT",
             "linkIds": [
@@ -8888,7 +10969,7 @@
         ],
         "outputs": [
           {
-            "id": "7f27b3e5-194e-506f-a32d-e40f02cf7131",
+            "id": "1b1aa8de-4cec-5612-8d86-b0bae357dd43",
             "name": "output",
             "type": "LATENT",
             "linkIds": [
@@ -8904,12 +10985,12 @@
         ]
       },
       {
-        "id": "b296940d-2d4e-516b-87af-92017e6b5b4e",
+        "id": "49a6e698-ffa6-5dc6-b0d0-59da73d3befb",
         "version": 1,
         "state": {
           "lastGroupId": 38,
-          "lastNodeId": 1647,
-          "lastLinkId": 3055,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
           "lastRerouteId": 387
         },
         "name": "H3 Load VAE for Upscale",
@@ -9130,7 +11211,7 @@
         "groups": [],
         "inputs": [
           {
-            "id": "fb04ec14-ce3c-5fdd-a1b4-cad181ab2242",
+            "id": "d8e23dc7-883b-5f38-90d2-177d9864af5f",
             "name": "vae_name",
             "type": "COMBO",
             "linkIds": [
@@ -9143,7 +11224,7 @@
             ]
           },
           {
-            "id": "446dd7ac-9032-5349-860d-11405203252d",
+            "id": "04c2584d-6b3b-58fa-8f19-041fd132c3be",
             "name": "vae_name_1",
             "type": "COMBO",
             "linkIds": [
@@ -9158,7 +11239,7 @@
         ],
         "outputs": [
           {
-            "id": "2ffd3738-67df-532f-8cb2-88b3e9895e68",
+            "id": "6b00a8dd-1ff3-5613-90d9-e3625daa46c0",
             "name": "out",
             "type": "OBVPM_BUNDLE",
             "linkIds": [
@@ -9168,6 +11249,932 @@
             "pos": [
               -56,
               3820
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3abbc37d-1ebc-54b2-945a-2607a5385eaf",
+        "version": 1,
+        "state": {
+          "lastGroupId": 38,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
+          "lastRerouteId": 387
+        },
+        "name": "Character maker",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -1378.69921875,
+            410,
+            178.69921875,
+            128
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -170,
+            440,
+            128,
+            68
+          ]
+        },
+        "widgets": [],
+        "links": [
+          {
+            "id": 3065,
+            "origin_id": 1652,
+            "origin_slot": 1,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 3056,
+            "origin_id": 1649,
+            "origin_slot": 0,
+            "target_id": 1652,
+            "target_slot": 5,
+            "type": "VAE"
+          },
+          {
+            "id": 3064,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 1652,
+            "target_slot": 7,
+            "type": "STRING"
+          },
+          {
+            "id": 3063,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 1652,
+            "target_slot": 21,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 3057,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 1652,
+            "target_slot": 25,
+            "type": "IMAGE"
+          },
+          {
+            "id": 3058,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 1652,
+            "target_slot": 26,
+            "type": "IMAGE"
+          }
+        ],
+        "config": {},
+        "nodes": [
+          {
+            "id": 1649,
+            "type": "Unbundle (obvpm)",
+            "pos": [
+              -1140,
+              64
+            ],
+            "size": [
+              199,
+              90
+            ],
+            "order": 0,
+            "mode": 0,
+            "title": "Get h3_upscale_vaes",
+            "widgets_values": [
+              "video_vae\naudio_vae",
+              "h3_upscale_vaes"
+            ],
+            "flags": {},
+            "properties": {
+              "Node name for S&R": "Unbundle (obvpm)",
+              "obvpm_layout": {
+                "order": [
+                  "video_vae",
+                  "audio_vae"
+                ],
+                "hidden": [],
+                "known": [
+                  "video_vae",
+                  "audio_vae"
+                ]
+              },
+              "obvpm_constant": true,
+              "obvpm_title": "Unbundle (obvpm)"
+            },
+            "inputs": [],
+            "outputs": [
+              {
+                "label": "video_vae",
+                "localized_name": "video_vae",
+                "name": "out_1",
+                "type": "*",
+                "links": [
+                  3056
+                ]
+              },
+              {
+                "label": "audio_vae",
+                "localized_name": "audio_vae",
+                "name": "out_2",
+                "type": "*",
+                "links": []
+              }
+            ]
+          },
+          {
+            "id": 1652,
+            "type": "MiniMaxH3RefModExtract",
+            "pos": [
+              -700,
+              64
+            ],
+            "size": [
+              470,
+              850
+            ],
+            "order": 1,
+            "mode": 0,
+            "title": "Create and save your character RefMod",
+            "widgets_values": [
+              "my_character_v1",
+              "Full Reference",
+              "identity",
+              0,
+              512,
+              16,
+              16,
+              16,
+              0,
+              false,
+              false,
+              1,
+              5120,
+              "",
+              false,
+              "manual",
+              "",
+              "error"
+            ],
+            "flags": {},
+            "properties": {
+              "Node name for S&R": "MiniMaxH3RefModExtract"
+            },
+            "inputs": [
+              {
+                "localized_name": "ref_image_0",
+                "name": "refs_image.ref_image_0",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "ref_video_0",
+                "name": "refs_video.ref_video_0",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "refs_bundle",
+                "name": "refs_bundle",
+                "shape": 7,
+                "type": "H3_REF_LIST",
+                "link": null
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              },
+              {
+                "localized_name": "av_encoder",
+                "name": "av_encoder",
+                "shape": 7,
+                "type": "MINIMAX_H3_AV_ENCODER",
+                "link": null
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "shape": 7,
+                "type": "VAE",
+                "link": 3056
+              },
+              {
+                "localized_name": "mask_list",
+                "name": "mask_list",
+                "shape": 7,
+                "type": "H3_MASK_LIST",
+                "link": null
+              },
+              {
+                "localized_name": "name",
+                "name": "name",
+                "type": "STRING",
+                "widget": {
+                  "name": "name"
+                },
+                "link": 3064
+              },
+              {
+                "localized_name": "mode",
+                "name": "mode",
+                "type": "COMBO",
+                "widget": {
+                  "name": "mode"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "concept_type",
+                "name": "concept_type",
+                "type": "COMBO",
+                "widget": {
+                  "name": "concept_type"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "background_retention",
+                "name": "background_retention",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "background_retention"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "ref_resolution",
+                "name": "ref_resolution",
+                "type": "INT",
+                "widget": {
+                  "name": "ref_resolution"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "pool_h",
+                "name": "pool_h",
+                "type": "INT",
+                "widget": {
+                  "name": "pool_h"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "pool_w",
+                "name": "pool_w",
+                "type": "INT",
+                "widget": {
+                  "name": "pool_w"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "latent_frames",
+                "name": "latent_frames",
+                "type": "INT",
+                "widget": {
+                  "name": "latent_frames"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "Refinement Steps",
+                "name": "identity",
+                "type": "INT",
+                "widget": {
+                  "name": "identity"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "merge",
+                "name": "merge",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "merge"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "motion_only",
+                "name": "motion_only",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "motion_only"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "multiplier",
+                "name": "multiplier",
+                "type": "INT",
+                "widget": {
+                  "name": "multiplier"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "max_tokens",
+                "name": "max_tokens",
+                "type": "INT",
+                "widget": {
+                  "name": "max_tokens"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "description",
+                "name": "description",
+                "type": "STRING",
+                "widget": {
+                  "name": "description"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "save",
+                "name": "save",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "save"
+                },
+                "link": 3063
+              },
+              {
+                "localized_name": "extraction_preset",
+                "name": "extraction_preset",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "extraction_preset"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "subfolder",
+                "name": "subfolder",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "subfolder"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "budget_policy",
+                "name": "budget_policy",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "budget_policy"
+                },
+                "link": null
+              },
+              {
+                "name": "refs_image.ref_image_1",
+                "type": "IMAGE",
+                "link": 3057
+              },
+              {
+                "localized_name": "ref_image_2",
+                "name": "refs_image.ref_image_2",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 3058
+              },
+              {
+                "localized_name": "ref_image_3",
+                "name": "refs_image.ref_image_3",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "mods",
+                "name": "mods",
+                "type": "H3_REF_MODS",
+                "links": []
+              },
+              {
+                "localized_name": "details",
+                "name": "details",
+                "type": "STRING",
+                "links": [
+                  3065
+                ]
+              }
+            ]
+          }
+        ],
+        "groups": [],
+        "inputs": [
+          {
+            "id": "59b55de8-1cc3-56dc-9338-5fd424b7e44c",
+            "name": "name",
+            "type": "STRING",
+            "linkIds": [
+              3064
+            ],
+            "localized_name": "name",
+            "pos": [
+              51,
+              24
+            ]
+          },
+          {
+            "id": "79dced34-53c8-5387-b186-5654d0a77d21",
+            "name": "save",
+            "type": "BOOLEAN",
+            "linkIds": [
+              3063
+            ],
+            "localized_name": "save",
+            "pos": [
+              51,
+              44
+            ]
+          },
+          {
+            "id": "a420df2b-edfd-5141-b7b3-af3970926822",
+            "name": "refs_image.ref_image_1",
+            "type": "IMAGE",
+            "linkIds": [
+              3057
+            ],
+            "label": "photo 1",
+            "pos": [
+              51,
+              64
+            ]
+          },
+          {
+            "id": "568e611b-9d1a-5804-af66-6d6b45301c2b",
+            "name": "refs_image.ref_image_2",
+            "type": "IMAGE",
+            "linkIds": [
+              3058
+            ],
+            "localized_name": "ref_image_2",
+            "label": "photo 2",
+            "shape": 7,
+            "pos": [
+              51,
+              84
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "45a96ae1-70f2-5d2e-b7d1-79a24dc6614f",
+            "name": "details",
+            "type": "STRING",
+            "linkIds": [
+              3065
+            ],
+            "localized_name": "details",
+            "pos": [
+              24,
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "id": "69dc710f-bc82-5620-8bed-bf5bab56ddc6",
+        "version": 1,
+        "state": {
+          "lastGroupId": 38,
+          "lastNodeId": 1663,
+          "lastLinkId": 3076,
+          "lastRerouteId": 387
+        },
+        "name": "Voice maker",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -1818,
+            328,
+            128,
+            108
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -1150,
+            348,
+            128,
+            68
+          ]
+        },
+        "widgets": [],
+        "links": [
+          {
+            "id": 3059,
+            "origin_id": 1653,
+            "origin_slot": 1,
+            "target_id": 1655,
+            "target_slot": 1,
+            "type": "*"
+          },
+          {
+            "id": 3061,
+            "origin_id": 1655,
+            "origin_slot": 0,
+            "target_id": 1656,
+            "target_slot": 0,
+            "type": "H3_REF_MODS"
+          },
+          {
+            "id": 3060,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 1655,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 3072,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 1655,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 3071,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 1655,
+            "target_slot": 9,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 3062,
+            "origin_id": 1656,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          }
+        ],
+        "config": {},
+        "nodes": [
+          {
+            "id": 1653,
+            "type": "Unbundle (obvpm)",
+            "pos": [
+              -1630,
+              64
+            ],
+            "size": [
+              199,
+              90
+            ],
+            "order": 0,
+            "mode": 0,
+            "title": "Get h3_upscale_vaes",
+            "widgets_values": [
+              "video_vae\naudio_vae",
+              "h3_upscale_vaes"
+            ],
+            "flags": {},
+            "properties": {
+              "Node name for S&R": "Unbundle (obvpm)",
+              "obvpm_layout": {
+                "order": [
+                  "video_vae",
+                  "audio_vae"
+                ],
+                "hidden": [],
+                "known": [
+                  "video_vae",
+                  "audio_vae"
+                ]
+              },
+              "obvpm_constant": true,
+              "obvpm_title": "Unbundle (obvpm)"
+            },
+            "inputs": [],
+            "outputs": [
+              {
+                "label": "video_vae",
+                "localized_name": "video_vae",
+                "name": "out_1",
+                "type": "*",
+                "links": []
+              },
+              {
+                "label": "audio_vae",
+                "localized_name": "audio_vae",
+                "name": "out_2",
+                "type": "*",
+                "links": [
+                  3059
+                ]
+              }
+            ]
+          },
+          {
+            "id": 1655,
+            "type": "MiniMaxH3RefModAudioExtract",
+            "pos": [
+              -1630,
+              320
+            ],
+            "size": [
+              420,
+              360
+            ],
+            "order": 1,
+            "mode": 0,
+            "title": "Create and save a voice RefMod",
+            "widgets_values": [
+              "my_voice_v1",
+              30,
+              5120,
+              "error",
+              "voice",
+              "",
+              "",
+              false
+            ],
+            "flags": {},
+            "properties": {
+              "Node name for S&R": "MiniMaxH3RefModAudioExtract"
+            },
+            "inputs": [
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "type": "AUDIO",
+                "link": 3060
+              },
+              {
+                "localized_name": "audio_vae",
+                "name": "audio_vae",
+                "type": "VAE",
+                "link": 3059
+              },
+              {
+                "localized_name": "name",
+                "name": "name",
+                "type": "STRING",
+                "widget": {
+                  "name": "name"
+                },
+                "link": 3072
+              },
+              {
+                "localized_name": "max_seconds",
+                "name": "max_seconds",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "max_seconds"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "max_tokens",
+                "name": "max_tokens",
+                "type": "INT",
+                "widget": {
+                  "name": "max_tokens"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "budget_policy",
+                "name": "budget_policy",
+                "type": "COMBO",
+                "widget": {
+                  "name": "budget_policy"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "concept_type",
+                "name": "concept_type",
+                "type": "COMBO",
+                "widget": {
+                  "name": "concept_type"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "description",
+                "name": "description",
+                "type": "STRING",
+                "widget": {
+                  "name": "description"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "subfolder",
+                "name": "subfolder",
+                "type": "STRING",
+                "widget": {
+                  "name": "subfolder"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "save",
+                "name": "save",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "save"
+                },
+                "link": 3071
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "H3_REF_MODS",
+                "name": "H3_REF_MODS",
+                "type": "H3_REF_MODS",
+                "links": [
+                  3061
+                ]
+              }
+            ]
+          },
+          {
+            "id": 1656,
+            "type": "MiniMaxH3RefModInspect",
+            "pos": [
+              -1630,
+              730
+            ],
+            "size": [
+              270,
+              190
+            ],
+            "order": 2,
+            "mode": 0,
+            "title": "Inspect voice RefMod",
+            "widgets_values": [
+              0,
+              "off",
+              0.5,
+              "first_frame"
+            ],
+            "flags": {},
+            "properties": {
+              "Node name for S&R": "MiniMaxH3RefModInspect"
+            },
+            "inputs": [
+              {
+                "localized_name": "mods",
+                "name": "mods",
+                "type": "H3_REF_MODS",
+                "link": 3061
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "shape": 7,
+                "type": "VAE",
+                "link": null
+              },
+              {
+                "localized_name": "index",
+                "name": "index",
+                "type": "INT",
+                "widget": {
+                  "name": "index"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "preview",
+                "name": "preview",
+                "type": "COMBO",
+                "widget": {
+                  "name": "preview"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "strength",
+                "name": "strength",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "strength"
+                },
+                "link": null
+              },
+              {
+                "localized_name": "visual_preview",
+                "name": "visual_preview",
+                "shape": 7,
+                "type": "COMBO",
+                "widget": {
+                  "name": "visual_preview"
+                },
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "details",
+                "name": "details",
+                "type": "STRING",
+                "links": [
+                  3062
+                ]
+              },
+              {
+                "localized_name": "image_preview",
+                "name": "image_preview",
+                "type": "IMAGE",
+                "links": []
+              },
+              {
+                "localized_name": "audio_preview",
+                "name": "audio_preview",
+                "type": "AUDIO",
+                "links": []
+              },
+              {
+                "localized_name": "reference_map",
+                "name": "reference_map",
+                "type": "STRING",
+                "links": []
+              }
+            ]
+          }
+        ],
+        "groups": [],
+        "inputs": [
+          {
+            "id": "ebcbfa0e-f261-5e8f-880d-0c5409c75b6b",
+            "name": "audio",
+            "type": "AUDIO",
+            "linkIds": [
+              3060
+            ],
+            "localized_name": "audio",
+            "label": "voice clip",
+            "pos": [
+              51,
+              24
+            ]
+          },
+          {
+            "id": "1c1e84a4-eac3-5dee-b52b-17667eb0a863",
+            "name": "name",
+            "type": "STRING",
+            "linkIds": [
+              3072
+            ],
+            "localized_name": "name",
+            "pos": [
+              51,
+              44
+            ]
+          },
+          {
+            "id": "0f452440-dd64-57fa-9e32-dd22ffac63e5",
+            "name": "save",
+            "type": "BOOLEAN",
+            "linkIds": [
+              3071
+            ],
+            "localized_name": "save",
+            "pos": [
+              51,
+              64
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "55e2b57d-4ba3-57d9-82ab-1534e29d7ef9",
+            "name": "details",
+            "type": "STRING",
+            "linkIds": [
+              3062
+            ],
+            "localized_name": "details",
+            "pos": [
+              24,
+              24
             ]
           }
         ]
